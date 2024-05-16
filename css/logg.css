@@ -1,0 +1,63 @@
+* {
+    background-color: #FDFCDC;
+    color: #0C7C59;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    margin: 0;
+}
+
+nav {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+  
+nav h1 a {
+    float: left;
+    font-family:'Archivo Black', 'Courier New', Courier, monospace;
+    font-size: 30px;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+nav a {
+    float: right;
+    padding-top: 10px;
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+.logg {
+    position: relative;
+    padding-top: 100px;
+    float: left;
+}
+
+.logg ul li{
+    text-align: left;
+    padding-left: 10px;
+}
+
+#special {
+    list-style:none;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.version {
+    float: left;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .problem {
+    float: right;
+    padding-top: 50px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  
+  /* Remember to adjust the sizing with relative measurements and with @media when done*/
