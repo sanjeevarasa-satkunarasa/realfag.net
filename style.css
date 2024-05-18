@@ -110,3 +110,14 @@ header {
   background-color: black;
   color: white;
 }
+
+#dark_button {
+  background: none;
+  border: none;
+  float: right;
+}
+
+#dark_button img{
+  height: 40px;
+  width: 40px;
+}
