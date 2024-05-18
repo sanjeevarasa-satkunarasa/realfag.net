@@ -1,4 +1,4 @@
-* {
+body {
   background-color: #FDFCDC;
   color: #0C7C59;
   text-align: center;
@@ -6,36 +6,42 @@
   margin: 0;
 }
 
-nav {
+body a {
+  color: #0C7C59;
+}
+
+body nav {
   position: fixed;
-  padding-top: 20px;
+  background-color: #FDFCDC;
+  padding-top: 30px;
   left: 0;
   right: 0;
   z-index: 10;
 }
 
-nav h1 {
+body nav h1 {
   float: left;
   font-family:'Archivo Black', 'Courier New', Courier, monospace;
+  color:#FDFCDC;
   font-size: 30px;
   padding-left: 20px;
 }
 
-nav a {
+body nav a {
   float: right;
   padding-top: 10px;
   padding-right: 20px;
   font-size: 20px;
 }
 
-nav #discord {
+body nav #discord {
   margin: 0;
   padding: 0;
   padding-right: 20px;
 }
 
 header {
-  padding-top: 80px;
+  padding-top: 100px;
 }
 
 .support {
@@ -73,7 +79,7 @@ header {
 }
 
 .grid-item{
-  padding-top: 30px;
+  padding-top: 2px;
 }
 
 .grid-item ul {
@@ -83,7 +89,7 @@ header {
 
 .grid-item ul li {
   list-style: none;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 .version {
@@ -98,4 +104,9 @@ header {
   padding-top: 50px;
   padding-right: 20px;
   padding-bottom: 20px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
 }
