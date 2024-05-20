@@ -39,14 +39,14 @@ header {
     display: flex;
     justify-content: center;
     width: 100%;
-    padding-top:75px;
+    padding-top: 5px;
     margin: 0;
 }
 
 .subject-title {
-    width:100%;
+    width: 100%;
     margin: auto;
-    padding-left: 15px;
+    padding-top: 20px;
 }
 
 .grid-item {
