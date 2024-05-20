@@ -103,3 +103,13 @@ header {
   padding-right: 20px;
   padding-bottom: 20px;
 }
+
+.dark-mode {
+  background-color:#2B303A;
+}
+
+#dark_button {
+  border: none;
+  background-color: white;
+  float: right;
+}
