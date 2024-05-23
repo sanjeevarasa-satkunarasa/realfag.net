@@ -8,32 +8,43 @@
 
 nav {
     position: fixed;
-    top: 20px;
+    padding-top: 20px;
     left: 0;
     right: 0;
     z-index: 10;
-}
+  }
 
-nav h1 a {
+nav h1 {
     float: left;
     font-family: 'Archivo Black', 'Courier New', Courier, monospace;
     font-size: 30px;
     padding-left: 20px;
-    text-decoration: none;
 }
 
 nav a {
     float: right;
-    padding-top: 10px;
+    padding-top: 15px;
     padding-right: 20px;
     font-size: 20px;
 }
 
-.grid p {
-    position: relative;
-    padding-top: 500px;
+nav #discord {
+    margin: 0;
+    padding: 0;
+    padding-right: 20px;
 }
 
+header {
+    padding-top: 10px;
+}
+
+div {
+    padding-top: 80px;
+}
+
+div h2 {
+    padding-top: 20px;
+}
 .version {
     float: left;
     padding-top: 50px;
@@ -47,5 +58,3 @@ nav a {
     padding-right: 20px;
     padding-bottom: 20px;
 }
-
-/* Remember to adjust the sizing with relative measurements and with @media when done*/

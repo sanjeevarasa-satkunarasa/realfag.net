@@ -1,0 +1,82 @@
+* {
+    background-color: #FDFCDC;
+    color: #0C7C59;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+}
+
+nav {
+    position: fixed;
+    padding-top: 20px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+nav h1 {
+    float: left;
+    font-family: 'Archivo Black', 'Courier New', Courier, monospace;
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+nav a {
+    float: right;
+    padding-top: 15px;
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+nav #discord {
+    margin: 0;
+    padding: 0;
+    padding-right: 20px;
+}
+
+header {
+    padding-top: 10px;
+}
+
+.grid {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 75px;
+    margin: 0;
+}
+
+.subject-title {
+    width: 100%;
+    margin: auto;
+    padding-left: 15px;
+}
+
+.grid-item {
+    padding-top: 5px;
+}
+
+.grid-item ul {
+    width: 0;
+    width: max-content;
+}
+
+.grid-item ul li {
+    list-style: none;
+    padding-top: 5px;
+}
+
+.version {
+    float: left;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.problem {
+    float: right;
+    padding-top: 50px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
