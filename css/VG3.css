@@ -19,21 +19,21 @@ nav h1 {
     font-family: 'Archivo Black', 'Courier New', Courier, monospace;
     font-size: 30px;
     padding-left: 20px;
-}
-
-nav a {
+  }
+  
+  nav a {
     float: right;
     padding-top: 15px;
     padding-right: 20px;
     font-size: 20px;
-}
-
-nav #discord {
+  }
+  
+  nav #discord {
     margin: 0;
     padding: 0;
     padding-right: 20px;
-}
-
+  }
+  
 header {
     padding-top: 10px;
 }
@@ -48,7 +48,7 @@ header {
 }
 
 .subject-title {
-    width: 100%;
+    width:100%;
     margin: auto;
     padding-left: 15px;
 }
