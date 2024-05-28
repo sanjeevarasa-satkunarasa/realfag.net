@@ -14,10 +14,12 @@
         href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 </head>
+
 <body>
     <nav>
         <h1> Realfag.net</h1>
-        <a id="discord" href="https://discord.gg/7AwyneAqgY" target="_blank"> <img src="/media/discord_logo.png" height=50px width=50px> </a>
+        <a id="discord" href="https://discord.gg/7AwyneAqgY" target="_blank"> <img src="/media/discord_logo.png"
+                height=50px width=50px> </a>
         <!-- <a href="../index.html"> Tilbake </a> -->
         <a href="/html/VG3.html"> VG3 </a>
         <a href="/html/VG2.html"> VG2 </a>
@@ -34,10 +36,12 @@
         <h3> Støtt oss ved å gi dine oppgaver/prøver/løsningsforslag!</h3>
         <a href="mailto:contact@realfag.net"> Send her (contact@realfag.net)! </a>
         <p> </p>
-        <!--<a href="https://www.buymeacoffee.com/realfag"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&#x2615;&slug=realfag&button_colour=db4a2b&font_colour=ffffff&font_family=Lato&outline_colour=ffffff&coffee_colour=FFDD00" /></a> -->
+    </div>
+    <!--<a href="https://www.buymeacoffee.com/realfag"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&#x2615;&slug=realfag&button_colour=db4a2b&font_colour=ffffff&font_family=Lato&outline_colour=ffffff&coffee_colour=FFDD00" /></a> -->
     <div class="project">
         <h1>Framtidige Prosjekter</h1>
-        <video src="/media/OCR Program AD.mp4" height="500px" width="750px" autoplay loop controls >Nettleseren din støtter ikke Video gjennom HTML</video>
+        <video src="/media/OCR Program AD.mp4" height="500px" width="750px" autoplay loop controls>Nettleseren din
+            støtter ikke Video gjennom HTML</video>
     </div>
     <button onclick="toggleMode()">Toggle Dark Mode</button>
     <footer>
@@ -48,6 +52,15 @@
             <a href="mailto:contact@realfag.net"> Rapporter et problem/forbedringer </a>
         </div>
     </footer>
+    <script>
+        function toggleMode() {
+            var themeStyle = document.getElementById("theme-style");
+            if (themeStyle.getAttribute("href") === "styles.css") {
+                themeStyle.href = "styles-dark.css";
+            } else {
+                themeStyle.href = "styles.css";
+            }
+        }
+    </script>
 </body>
-
 </html>
