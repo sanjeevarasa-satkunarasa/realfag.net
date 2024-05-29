@@ -1,3 +1,5 @@
+# Note if you get an error it is due to the program not being outside of the question formatter folder.
+
 import os
 from math import *
 
@@ -24,7 +26,7 @@ heading_list.pop(0)
 file = open("output.txt", "w")
 p = 0
 for i in sorted_array:
-    full_list.append(heading_list[p])
+    full_list.append("<li><h3>" + heading_list[p] + "</h3></li>\n")
     full_list.append("""<li><a href="/eksamensoppgaver/R2/""" + i + """" target="_blank" download> Oppgave </a></li>\n""") # Remember to correct the file directory here as well
     p+=1    
 
