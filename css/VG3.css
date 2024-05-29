@@ -38,9 +38,11 @@ header {
     padding-top: 10px;
 }
 
+/*
 .grid {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     width: 100%;
     padding-top: 75px;
@@ -50,21 +52,35 @@ header {
 .subject-title {
     width:100%;
     margin: auto;
-    padding-left: 15px;
+    padding-left: 10px;
 }
 
 .grid-item {
+    box-sizing: border-box;
     padding-top: 5px;
+    flex: 25%;
+    padding: 25px;
+    border: black 2px solid;
 }
 
 .grid-item ul {
     width: 0;
-    width: max-content;
+    width:max-content;
 }
 
 .grid-item ul li {
     list-style: none;
     padding-top: 5px;
+}
+*/
+
+.grid {
+
+
+}
+
+.grid-item {
+    border: black 2px solid;
 }
 
 .version {
@@ -80,3 +96,9 @@ header {
     padding-right: 20px;
     padding-bottom: 20px;
 }
+
+@media screen and (max-width: 992px) {
+    .grid-item {
+      flex: 50%;
+    }
+  }
