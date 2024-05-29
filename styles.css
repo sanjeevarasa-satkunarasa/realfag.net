@@ -20,6 +20,8 @@ nav {
 }
 
 nav h1 {
+  margin:0;
+  padding:0;
   float: left;
   font-family: 'Archivo Black', 'Courier New', Courier, monospace;
   font-size: 30px;
@@ -63,22 +65,27 @@ header {
   margin: 0;
 }
 
+#dark_button {
+  margin:0;
+  padding: 0;
+  float: right;
+  position: relative;
+  background-color:#FDFCDC;
+  border: none;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
 .version {
-  float: left;
   padding-top: 50px;
   padding-left: 20px;
-  padding-bottom: 20px;
 }
 
 .problem {
-  float: right;
   padding-top: 50px;
   padding-right: 20px;
   padding-bottom: 20px;
-}
-
-#dark_button {
-  border: none;
-  background-color: white;
-  float: right;
 }

@@ -43,6 +43,45 @@ nav #discord {
   padding-right: 20px;
 }
 
+nav a {
+  float: right;
+  padding-top: 15px;
+  padding-right: 20px;
+  font-size: 20px;
+}
+
+nav #discord {
+  margin: 0;
+  padding: 0;
+  padding-right: 20px;
+}
+
+header {
+  padding-top: 10px;
+}
+
+.row {
+  padding-top: 100px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.column {
+  padding: 30px;
+  flex: 10%;
+}
+
+.column ul {
+  padding-right: 40px;
+}
+
+.column ul li {
+  list-style: none;
+  padding-top: 10px;
+}
+
 header {
   padding-top: 100px;
 }
@@ -67,22 +106,27 @@ header {
   margin: 0;
 }
 
+#dark_button {
+  margin:0;
+  padding: 0;
+  float: right;
+  position: relative;
+  background-color:#2b303a;
+  border: none;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
 .version {
-  float: left;
   padding-top: 50px;
   padding-left: 20px;
-  padding-bottom: 20px;
 }
 
 .problem {
-  float: right;
   padding-top: 50px;
   padding-right: 20px;
   padding-bottom: 20px;
-}
-
-#dark_button {
-  border: none;
-  background-color: white;
-  float: right;
 }
