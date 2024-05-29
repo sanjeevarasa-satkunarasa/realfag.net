@@ -1,3 +1,88 @@
 * {
-    background-color:#2B303A;
+  background-color: #2b303a !important;
+}
+
+body {
+  background-color: #fdfcdc;
+  color: #0c7c59;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+}
+
+body a {
+  color: #0c7c59;
+}
+
+nav {
+  position: fixed;
+  padding-top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background-color: #fdfcdc;
+}
+
+nav h1 {
+  float: left;
+  font-family: "Archivo Black", "Courier New", Courier, monospace;
+  font-size: 30px;
+  padding-left: 20px;
+}
+
+nav a {
+  float: right;
+  padding-top: 15px;
+  padding-right: 20px;
+  font-size: 20px;
+}
+
+nav #discord {
+  margin: 0;
+  padding: 0;
+  padding-right: 20px;
+}
+
+header {
+  padding-top: 100px;
+}
+
+.support {
+  padding-top: 20px;
+}
+
+.support h3 {
+  padding-top: 7px;
+}
+
+.support a {
+  font-size: 20px;
+}
+
+.support p {
+  padding-top: 10px;
+}
+
+.project h1 {
+  margin: 0;
+}
+
+.version {
+  float: left;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.problem {
+  float: right;
+  padding-top: 50px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+#dark_button {
+  border: none;
+  background-color: white;
+  float: right;
 }
