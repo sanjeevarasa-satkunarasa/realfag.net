@@ -14,7 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <script src="/script/dark-mode-script.js"></script>
-    <script src="/script/styling.js"></script>
+    <script src="/script/popup.js"></script>
 </head>
 
 <body>
@@ -76,19 +76,46 @@
         <video src="/media/OCR Program AD.mp4" height="500px" width="750px" autoplay loop controls>Nettleseren din
            Nettleseren din støtter ikke denne videon</video>
     </div>
-    <div>
+    <div class="ambitions">
         <h1>Ambisjoner</h1>
         <h3>Vårt mål er å gjøre læring så enkelt så mulig</h3>
-        <p>Dette er blant annet hvorfor vi har lagt ut eksamensoppgaver og </p>
+        <p>Dette er blant annet hvorfor vi har lagt ut eksamensoppgaver og informasjon helt gratis </p>
+        <h4>Vi ønsker også å tilby undervisning som ikke koster mer enn det faktisk behøver</h4>
     </div>
-    <button onclick="toggleMode()" id="dark_button" height="5px" width="5px"async><img src="/media/dark_mode.png"></button>
+    <div class="mentor">
+        <h1>Velg mentor gjennom realfag.net! (Kommer Snart)</h1>
+        <div class="mentor-element">
+            <h3>Undervisning for elever av elever</h3>
+            <p>Elever vet best hvordan elever lærer</p>
+            <!--Legg til bilde her-->
+        </div>
+        <div class="mentor-element">
+            <h3>Billigere enn konkurenter</h3>
+            <p>Våre priser er billigere enn konkurentene fordi det er elever som underviser</p>
+            <!--Legg til bilde som samennligner våre priser med andre-->
+        </div>
+        <div class="mentor-element">
+            <h3>Mer enn bare skole</h3>
+            <p>Vi lærer deg ikke bare det faglige men også hvordan du skal lære</p>
+            <!--Legg til bilde her-->
+        </div>
+    </div>
+    <div id="problem_popup">
+        <form>
+            <p id="close_popup">X</p>
+            <label for="problem-text">Oppgi Problemet ditt:</label>
+            <br>
+            <textarea id="problem-text" rows="10" cols="40"></textarea>
+            <br>
+            <input type="submit" value="Send inn">
+        </form>
+    </div>
+    <button onclick="toggleMode()" id="dark_button" async><img src="/media/dark_mode.png" height="50px" width="50px"></button>
     <footer>
         <div class="version">Versjon 1.1.6
             <a href="/html/logg.html"> Logg </a>
         </div>
-        <div class="problem">
-            <a href="mailto:contact@realfag.net"> Rapporter et problem/forbedringer </a>
-        </div>
+        <button id="problem"> Rapporter et problem/forbedringer</button>
     </footer>
 </body>
 </html>
