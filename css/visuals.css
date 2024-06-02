@@ -1,0 +1,41 @@
+body {
+    background-color: #fdfcdc;
+}
+
+h1, h2, h3, p, li, a{
+    font-family:"Work Sans", "DM Sans", sans-serif;
+    color: #0C7C59;
+}
+
+nav {
+  position: fixed;
+  padding-top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 20;
+}
+
+nav h1 {
+  margin:0;
+  padding:0;
+  float: left;
+  font-size: 30px;
+  padding-left: 20px;
+}
+
+nav a {
+  float: right;
+  padding-top: 15px;
+  padding-right: 20px;
+  font-size: 20px;
+}
+
+nav #discord {
+  margin: 0;
+  padding: 0;
+  padding-right: 20px;
+}
+
+.main {
+    padding-top: 75px;
+}
