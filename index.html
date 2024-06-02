@@ -30,21 +30,57 @@
         <!-- <a href="/html/ungdomsskole.html"> Ungdomsskole </a> -->
     </nav>
     <header>
-        <h2> Nettstedet som samler alle eksamener på ett sted.</h2>
+        <h2> Nettstedet som gjør læring enkelt</h2>
     </header>
     <div class="support">
         <h1> Støtt oss!</h1>
         <h3> Støtt oss ved å gi dine oppgaver/prøver/løsningsforslag!</h3>
-        <a href="mailto:contact@realfag.net"> Send her (contact@realfag.net)! </a>
+        <div class="form">
+            <h3>Skjema for innsendinger:</h3>
+            <form netlify>
+                <label for="year">Årstall (åååå)</label>
+                <input type="number" name="year" min="1950" max="2025">
+                <br>
+                <label for="school">Skolenavn:</label>
+                <input list="school">
+                <datalist id="school">
+                    <option value="Nydalen VGS">
+                    <option value="Elvebakken VGS">
+                    <option value="Bjerke VGS">
+                    <option value="Valle Hovin VGS">
+                    <option value="Stovner VGS">
+                </datalist>
+                <br>
+                <label for="file">Last opp fil*</label>
+                <input type="file" id="file" name="file" required>
+                <br>
+                <label for="resource_type">Ressurstype*</label>
+                <select name="resource_type" id="resource_type" required>
+                    <option value="exam-paper">Eksamensoppgaver</option>
+                    <option value="mock-up-papers">Tentamensoppgaver</option>
+                    <option value="assignements">Innleveringer/Oppgaver</option>
+                    <option value="other">Annet</option>
+                </select>
+                <br>
+                <input type="submit" value="Send inn">
+                <input type="reset" value="Nullstill">
+            </form>
+        </div>
+        <br>
+        <a href="mailto:contact@realfag.net"> Alternativt send her (contact@realfag.net)! </a>
         <p> </p>
     </div>
     <!--<a href="https://www.buymeacoffee.com/realfag"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&#x2615;&slug=realfag&button_colour=db4a2b&font_colour=ffffff&font_family=Lato&outline_colour=ffffff&coffee_colour=FFDD00" /></a> -->
     <div class="project">
         <h1>Framtidige Prosjekter</h1>
         <video src="/media/OCR Program AD.mp4" height="500px" width="750px" autoplay loop controls>Nettleseren din
-            støtter ikke Video gjennom HTML</video>
+           Nettleseren din støtter ikke denne videon</video>
     </div>
-    
+    <div>
+        <h1>Ambisjoner</h1>
+        <h3>Vårt mål er å gjøre læring så enkelt så mulig</h3>
+        <p>Dette er blant annet hvorfor vi har lagt ut eksamensoppgaver og </p>
+    </div>
     <button onclick="toggleMode()" id="dark_button" height="5px" width="5px"async><img src="/media/dark_mode.png"></button>
     <footer>
         <div class="version">Versjon 1.1.6
