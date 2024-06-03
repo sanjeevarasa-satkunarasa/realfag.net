@@ -1,9 +1,10 @@
-document.problem_popup.hidden = true;
+getElementById(problem_popup).hidden = true;
 
-problem.onclick = function(){
+getElementById(problem_popup).onclick = function(){
     document.problem_popup.hidden = false;
 }
 
-close_popup.onclick = function() {
+getElementById(problem_popup).onclick = function() {
     document.problem_popup.hidden = true;
 }
+GETeLEMENT
