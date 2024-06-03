@@ -1,17 +1,17 @@
 * {
-  background-color: #2b303a !important;
+  background-color: #1F1F1F !important;
 }
 
 body {
   background-color: #fdfcdc;
-  color: #0c7c59;
+  color: #0F996D;
   text-align: center;
   font-family: "Courier New", Courier, monospace;
   margin: 0;
 }
 
 body a {
-  color: #0c7c59;
+  color: #0F996D;
 }
 
 nav {
@@ -111,7 +111,7 @@ header {
   padding: 0;
   float: right;
   position: relative;
-  background-color:#2b303a;
+  background-color:#1F1F1F;
   border: none;
 }
 
@@ -128,7 +128,7 @@ footer {
 #problem {
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
-  background-color:#2b303a;
+  background-color:#1F1F1F;
   border: none;
   padding-top: 50px;
   padding-right: 20px;
