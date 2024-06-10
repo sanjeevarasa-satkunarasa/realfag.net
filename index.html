@@ -13,8 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <script src="/script/dark-mode-script.js"></script>
-    <script src="/script/popup.js"></script>
+    <script src="/script/script.js"></script>
 </head>
 
 <body>
@@ -101,22 +100,24 @@
             Legg til bilde her
         </div>-->
     </div>
-    <div id="problem_popup">
-        <form netlify>
-            <p id="close_popup">X</p>
-            <label for="problem-text">Oppgi Problemet ditt:</label>
-            <br>
-            <textarea id="problem-text" rows="10" cols="40"></textarea>
-            <br>
-            <input type="submit" value="Send inn">
-        </form>
-    </div>
+   
     <button onclick="toggleMode()" id="dark_button" async><img src="/media/dark_mode.png" height="50px" width="50px"></button>
     <footer>
         <div class="version">Versjon 1.1.6
             <a href="/html/logg.html"> Logg </a>
         </div>
-        <button id="problem"> Rapporter et problem/forbedringer</button>
+        <div class="popup" onclick="popUp()" async> Rapporter et problem/forbedringer
+            <span class="popuptext" id="myPopup">
+                <form netlify>
+                    <label for="problem-text">Oppgi Problemet ditt:</label>
+                    <br>
+                    <textarea id="problem-text" rows="10" cols="40"></textarea>
+                    <br>
+                    <input type="submit" value="Send inn">
+                    <button onclick="popUpClose()">X</button>
+                </form>
+            </span>
+        </div>
     </footer>
 </body>
 </html>

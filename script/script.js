@@ -6,3 +6,13 @@ function toggleMode() {
       themeStyle.href = "css/styles.css";
   }
 }
+
+function popUp() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+
+function popUpClose() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("hide");
+}
