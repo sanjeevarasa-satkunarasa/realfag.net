@@ -27,7 +27,7 @@ file = open("output.txt", "w")
 p = 0
 for i in sorted_array:
     full_list.append("<li><h3>" + heading_list[p] + "</h3></li>\n")
-    full_list.append("""<li><a href="eksamensoppgaver/Medie og Informasjonskunnskap 2/""" + i + """" target="_blank" download> Oppgave </a></li>\n""") # Remember to correct the file directory here as well
+    full_list.append("""<li><a href="/eksamensoppgaver/Medie og Informasjonskunnskap 2/""" + i + """" target="_blank" download> Oppgave </a></li>\n""") # Remember to correct the file directory here as well
     p+=1    
 
 print(full_list)
