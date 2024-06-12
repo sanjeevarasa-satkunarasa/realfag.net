@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/visuals.css" >
+    <script src="/script/script.js"></script>
 </head>
 <body>
     <nav>
@@ -36,5 +37,22 @@
             <li>This is a list</li>
         </ul>
     </div>
+    <footer>
+        <div class="version">Versjon 1.2.0
+            <a href="/html/logg.html"> Logg </a>
+        </div>
+        <div class="popup" onclick="popUp()" async> Rapporter et problem/forbedringer
+            <span class="popuptext" id="myPopup">
+                <form netlify>
+                    <label for="problem-text">Oppgi Problemet ditt:</label>
+                    <br>
+                    <textarea id="problem-text" rows="10" cols="40"></textarea>
+                    <br>
+                    <input type="submit" value="Send inn">
+                </form>
+                <button onclick="popUpClose()">Lukk</button>
+            </span>
+        </div>
+    </footer>
 </body>
 </html>

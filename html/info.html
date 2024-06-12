@@ -50,12 +50,20 @@
     </div>
 </body>
 <footer>
-    <div class="version"> Versjon 1.1.6
+    <div class="version">Versjon 1.2.0
         <a href="/html/logg.html"> Logg </a>
     </div>
-    <div class="problem">
-        <a href="mailto:contact@realfag.net"> Rapporter et problem/forbedringer </a>
+    <div class="popup" onclick="popUp()" async> Rapporter et problem/forbedringer
+        <span class="popuptext" id="myPopup">
+            <form netlify>
+                <label for="problem-text">Oppgi Problemet ditt:</label>
+                <br>
+                <textarea id="problem-text" rows="10" cols="40"></textarea>
+                <br>
+                <input type="submit" value="Send inn">
+            </form>
+            <button onclick="popUpClose()">Lukk</button>
+        </span>
     </div>
 </footer>
-
 </html>

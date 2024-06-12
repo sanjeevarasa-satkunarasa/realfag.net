@@ -7,76 +7,95 @@
 }
 
 nav {
-  position: fixed;
-  padding-top: 20px;
-  left: 0;
-  right: 0;
-  z-index: 10;
+position: fixed;
+padding-top: 20px;
+left: 0;
+right: 0;
+z-index: 10;
 }
 
 nav h1 {
-  float: left;
-  font-family: 'Archivo Black', 'Courier New', Courier, monospace;
-  font-size: 30px;
-  padding-left: 20px;
+float: left;
+font-family: 'Archivo Black', 'Courier New', Courier, monospace;
+font-size: 30px;
+padding-left: 20px;
 }
 
 nav a {
-  float: right;
-  padding-top: 15px;
-  padding-right: 20px;
-  font-size: 20px;
+float: right;
+padding-top: 15px;
+padding-right: 20px;
+font-size: 20px;
 }
 
 nav #discord {
-  margin: 0;
-  padding: 0;
-  padding-right: 20px;
+margin: 0;
+padding: 0;
+padding-right: 20px;
 }
 
 header {
-  padding-top: 10px;
+padding-top: 10px;
 }
 
 .row {
-  padding-top: 100px;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+padding-top: 100px;
+position: relative;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
 }
 
 .column {
-  padding: 30px;
-  flex: 10%;
+padding: 30px;
+flex: 10%;
 }
 
 .column ul {
-  padding-right: 40px;
+padding-right: 40px;
 }
 
 .column ul li {
-  list-style: none;
-  padding-top: 10px;
+list-style: none;
+padding-top: 10px;
+}
+
+footer {
+display: flex;
+justify-content: space-between;
 }
 
 .version {
-  float: left;
-  padding-top: 50px;
-  padding-left: 20px;
-  padding-bottom: 20px;
+float: left;
+padding-bottom: 50px;
+padding-left: 20px;
 }
 
-.problem {
-  float: right;
-  padding-top: 50px;
-  padding-right: 20px;
-  padding-bottom: 20px;
+/* Popup container - can be anything you want */
+.popup {
+position: relative;
+display: inline-block;
+cursor: pointer;
+text-decoration: underline;
 }
 
-@media screen and (max-width: 992px) {
-  .column {
-    flex: 50%;
-    flex-direction: column;
-  }
+/* The actual popup */
+.popup .popuptext {
+visibility: hidden;
+width: 300px;
+background-color: #fff;
+color: #000;
+text-align: center;
+border-radius: 6px;
+padding: 10px 0;
+position: absolute;
+z-index: 1;
+bottom: 125%;
+left: 50%;
+margin-left: -150px;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+visibility: visible;
 }

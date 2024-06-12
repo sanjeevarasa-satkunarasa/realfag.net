@@ -32,8 +32,8 @@
             </div>
         </div>
     </nav>
-    <div class="grid">
-        <div class="grid-item">
+    <div class="row">
+        <div class="column">
             <h1 class="subject-title">1T</h1>
             <ul>
                 <li>
@@ -166,7 +166,7 @@
                 <li><h3><a href="/ZIP/1T.zip" target="_blank" download> Last ned alle som .zip</a></h3></li>
             </ul>
         </div>
-        <div class="grid-item">
+        <div class="column">
             <h1 class="subject-title">1P</h1>
             <ul>
                 <li>
@@ -295,12 +295,20 @@
     </div>
 </body>
 <footer>
-    <div class="version"> Versjon 1.1.6
+    <div class="version">Versjon 1.2.0
         <a href="/html/logg.html"> Logg </a>
     </div>
-    <div class="problem">
-        <a href="mailto:contact@realfag.net"> Rapporter et problem/forbedringer </a>
+    <div class="popup" onclick="popUp()" async> Rapporter et problem/forbedringer
+        <span class="popuptext" id="myPopup">
+            <form netlify>
+                <label for="problem-text">Oppgi Problemet ditt:</label>
+                <br>
+                <textarea id="problem-text" rows="10" cols="40"></textarea>
+                <br>
+                <input type="submit" value="Send inn">
+            </form>
+            <button onclick="popUpClose()">Lukk</button>
+        </span>
     </div>
 </footer>
-
 </html>
