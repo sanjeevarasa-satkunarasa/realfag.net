@@ -16,3 +16,7 @@ function popUpClose() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("hide");
 }
+
+function closeBanner() {
+  document.querySelector(".banner").style.display = "none";
+}

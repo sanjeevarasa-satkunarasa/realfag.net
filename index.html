@@ -10,9 +10,8 @@
     <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="/script/script.js"></script>
 </head>
 
@@ -102,6 +101,14 @@
     </div>
     <button onclick="toggleMode()" id="dark_button" async><img src="/media/dark_mode.png" height="50px"
             width="50px"></button>
+    <div class="banner">
+        <div class="banner__content">
+            <div class="banner__text"> ⚠️ Nettstedet er fortsatt under tung utvikling så forvent evt. problemer/mangler ⚠️</div>
+                <button class="banner__close" onclick="closeBanner()" type="button">
+                <span class="material-icons">close</span>
+                </button>
+            </div>
+    </div>
     <footer>
         <div class="version">Versjon 1.1.6
             <a href="/html/logg.html"> Logg </a>
@@ -119,8 +126,5 @@
             </span>
         </div>
     </footer>
-    <div class="development">
-        <h3> ⚠️ Nettstedet er fortsatt under tung utvikling så forvent evt. problemer/mangler ⚠️ </h3>
-    </div>
 </body>
 </html>
