@@ -124,6 +124,7 @@ footer {
   position: relative;
   display: inline-block;
   cursor: pointer;
+  text-decoration: underline;
 }
 
 /* The actual popup */
