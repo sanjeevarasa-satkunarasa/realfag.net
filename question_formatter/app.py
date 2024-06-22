@@ -8,7 +8,7 @@ def sorted_directory_listing_with_os_listdir(directory):
     sorted_items = sorted(items, reverse=True)
     return sorted_items
 
-sorted_array = sorted_directory_listing_with_os_listdir("eksamensoppgaver/Medie og Informasjonskunnskap 2") # Set file directory
+sorted_array = sorted_directory_listing_with_os_listdir("eksamensoppgaver\Rettslære 2") # Set file directory
 
 full_list = []
 heading_list= []
@@ -27,7 +27,7 @@ file = open("output.txt", "w")
 p = 0
 for i in sorted_array:
     full_list.append("<li><h3>" + heading_list[p] + "</h3></li>\n")
-    full_list.append("""<li><a href="/eksamensoppgaver/Medie og Informasjonskunnskap 2/""" + i + """" target="_blank" download> Oppgave </a></li>\n""") # Remember to correct the file directory here as well
+    full_list.append("""<li><a href="/eksamensoppgaver\Rettslære 2/""" + i + """" target="_blank" download> Oppgave </a></li>\n""") # Remember to correct the file directory here as well
     p+=1    
 
 print(full_list)
