@@ -61,7 +61,7 @@
         <h3> Støtt oss ved å gi dine oppgaver/prøver/løsningsforslag!</h3>
         <div class="form">
             <h3>Skjema for innsendinger:</h3>
-            <form netlify>
+            <form netlify method="POST">
                 <label for="year">Årstall (åååå)</label>
                 <input type="number" name="year" min="1950" max="2025">
                 <br>
@@ -116,7 +116,7 @@
         </div>
         <div class="popup" onclick="popUp()" async> Rapporter et problem/forbedringer
             <span class="popuptext" id="myPopup">
-                <form netlify>
+                <form netlify method="POST">
                     <label for="problem-text">Oppgi Problemet ditt:</label>
                     <br>
                     <textarea id="problem-text" rows="10" cols="40"></textarea>
