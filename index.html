@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="/script/script.js"></script>
 </head>
@@ -24,9 +24,10 @@
             </button>
             <div class="dropdown-content">
                 <a href="/html/info.html"> Info </a>
-                <a href="/html/VG1.html"> VG1 </a>
-                <a href="/html/VG2.html"> VG2 </a>
                 <a href="/html/VG3.html"> VG3 </a>
+              
+                <a href="/html/VG2.html"> VG2 </a>
+                  <a href="/html/VG1.html"> VG1 </a>
             </div>
         </div>
     </nav>
@@ -36,32 +37,15 @@
     <div class="ambitions">
         <h1>Våre Ambisjoner</h1>
         <h3>Vårt mål er å gjøre læring så enkelt så mulig</h3>
-        <p>Dette er blant annet hvorfor vi har lagt ut eksamensoppgaver og informasjon helt gratis </p>
-        <h4>Vi ønsker også å tilby undervisning som ikke koster mer enn det faktisk behøver</h4>
-    </div>
-    <div class="mentor">
-        <h1>Velg mentor gjennom realfag.net! (Kommer Snart)</h1>
-        <div class="mentor-element">
-            <h3>Undervisning for elever av elever</h3>
-            <p>Elever vet best hvordan elever lærer</p>
-            Legg til bilde her
-        </div>
-        <div class="mentor-element">
-            <h3>Billigere enn konkurenter</h3>
-            <p>Våre priser er billigere enn konkurentene fordi det er elever som underviser</p>
-            Legg til bilde som samennligner våre priser med andre
-        </div>
-        <div class="mentor-element">
-            <h3>Mer enn bare skole</h3>
-            <p>Vi lærer deg ikke bare det faglige men også hvordan du skal lære</p>
-            Legg til bilde her
+        <p>Dette er blant annet hvorfor vi har lagt ut eksamensoppgaver, oppgaveløsende program og informasjon helt gratis </p>
     </div>
     <div class="support">
         <h1> Støtt oss!</h1>
         <h3> Støtt oss ved å gi dine oppgaver/prøver/løsningsforslag!</h3>
-        <div class="form">
-            <h3>Skjema for innsendinger:</h3>
+        <div class="form">  
             <form netlify method="POST">
+                <label class="form-title">Skjema for innsending:</label>
+                <br>
                 <label for="year">Årstall (åååå)</label>
                 <input type="number" name="year" min="1950" max="2025">
                 <br>

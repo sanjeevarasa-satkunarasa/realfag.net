@@ -1,21 +1,33 @@
 body {
-  background-color: #FDFCDC;
-  color: #0C7C59;
+  background-color: #4A9183;
+  color: #FFF;
   text-align: center;
-  font-family:"Source Sans 3", sans-serif;
+  line-height: 25px;
+  font-family: "Playfair Display", serif;
   margin: 0;
 }
 
 body a {
-  color: #0C7C59;
+  color: #fff;
+}
+
+label, input {
+  display: inline-block;
+}
+
+label {
+  margin: 15px;
 }
 
 nav {
   position: fixed;
   top:-10px;
+  padding-top: 8px;
+  padding-bottom: 12px;
   left: 0;
   right: 0;
   z-index: 20;
+  background-color: #fff;
 }
 
 nav h1 a {
@@ -34,6 +46,7 @@ nav a {
   padding-top: 20px;
   padding-right: 20px;
   font-size: 20px;
+  color: #3c3c3c;
 }
 
 nav #discord {
@@ -42,7 +55,6 @@ nav #discord {
   padding-right: 20px;
   padding-top: 10px;
 }
-
 
 @media screen and (max-width: 725px) {
   /* The dropdown container */
@@ -105,13 +117,12 @@ nav #discord {
 }
 
 .dropdown-content {
-  display: inline-block;
   float: right;
 }
 }
 
 header {
-  padding-top: 100px;
+  padding-top: 120px;
 }
 
 .support {
@@ -128,6 +139,34 @@ header {
 
 .support p {
   padding-top: 10px;
+}
+
+
+.form {
+  background-color: #fff;
+  color: #4A9183;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  line-height: 10px;
+}
+
+.form-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.mentor-image {
+  width: 300px;
+  height: 200px;
+  padding-bottom: 20px;
+}
+
+.mentor-link {
+  font-size: 18px;
 }
 
 .project h1 {
@@ -178,11 +217,11 @@ header {
 footer {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 25px;
 }
 
 .version {
   float: left;
-  padding-bottom: 50px;
   padding-left: 20px;
 }
 
@@ -192,6 +231,7 @@ footer {
   display: inline-block;
   cursor: pointer;
   text-decoration: underline;
+  padding-right: 20px;
 }
 
 /* The actual popup */
@@ -207,7 +247,7 @@ footer {
   z-index: 1;
   bottom: 125%;
   left: 50%;
-  margin-left: -150px;
+  margin-left: -180px;
 }
 
 /* Toggle this class - hide and show the popup */
