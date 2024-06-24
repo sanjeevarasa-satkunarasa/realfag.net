@@ -7,4 +7,6 @@ At Realfag.net we have developed a tool that can recognise papers by these metho
 - Inputting the question in the text input box
 
 Watch the video below to get a greater overview of how the video works.
-<video src="media/OCR Program AD.mp4" width="320" height="240" controls></video>
+![Video showing a mockup of how the OCR Program will function]((https://github.com/sanjeevarasa-satkunarasa/realfag.net/blob/main/media/OCR%20Program%20AD.mp4))
+
+To view a more descriptive page on the different components of Realfag.net's OCR Program [click here](https://sanjeevarasa.notion.site/Realfag-net-f7c5960fe32d4d5fb4c67ae396fe18ab).
