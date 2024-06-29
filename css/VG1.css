@@ -1,17 +1,33 @@
-* {
-    background-color: #FDFCDC;
-    color: #0C7C59;
-    text-align: center;
-    font-family:"Source Sans 3", sans-serif;
-    margin: 0;
+body {
+  background-color: #4A9183;
+  color: #FFF;
+  text-align: center;
+  line-height: 10px;
+  font-family: "Playfair Display", serif;
+  margin: 0;
+}
+
+body a {
+  color: #fff;
+}
+
+label, input {
+  display: inline-block;
+}
+
+label {
+  margin: 15px;
 }
 
 nav {
   position: fixed;
   top:-10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   left: 0;
   right: 0;
   z-index: 20;
+  background-color: #fff;
 }
 
 nav h1 a {
@@ -30,6 +46,7 @@ nav a {
   padding-top: 20px;
   padding-right: 20px;
   font-size: 20px;
+  color: #4A9183;
 }
 
 nav #discord {
@@ -37,62 +54,62 @@ nav #discord {
   padding: 0;
   padding-right: 20px;
   padding-top: 10px;
+  padding-bottom: 15px;
 }
-
 
 @media screen and (max-width: 725px) {
   /* The dropdown container */
-.dropdown {
-  float: right;
-  overflow: hidden;
-}
+  .dropdown {
+    float: right;
+    overflow: hidden;
+  }
 
-/* Dropdown button */
-.dropdown .dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: #fdfcdc;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
-  margin-top: 10px;
-}
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #fdfcdc;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+    margin-top: 10px;
+  }
 
-/* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color:#db4a2b;
-}
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color:#db4a2b;
+  }
 
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #fdfcdc;
-  min-width: 160px;
-  z-index: 1;
-}
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fdfcdc;
+    min-width: 160px;
+    z-index: 1;
+  }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-  float: none;
-  color: #db4a2b;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: #db4a2b;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
 
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #fdfcdc;
-}
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #fdfcdc;
+  }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 725px){
@@ -101,7 +118,6 @@ nav #discord {
 }
 
 .dropdown-content {
-  display: inline-block;
   float: right;
 }
 }
@@ -135,11 +151,11 @@ header {
 footer {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 25px;
 }
 
 .version {
   float: left;
-  padding-bottom: 50px;
   padding-left: 20px;
 }
 
@@ -149,6 +165,7 @@ footer {
   display: inline-block;
   cursor: pointer;
   text-decoration: underline;
+  padding-right: 20px;
 }
 
 /* The actual popup */
@@ -164,7 +181,7 @@ footer {
   z-index: 1;
   bottom: 125%;
   left: 50%;
-  margin-left: -150px;
+  margin-left: -180px;
 }
 
 /* Toggle this class - hide and show the popup */
