@@ -113,13 +113,13 @@ nav #discord {
 }
 
 @media screen and (min-width: 725px){
-.dropbtn {
-  visibility: hidden;
-}
+  .dropbtn {
+    visibility: hidden;
+  }
 
-.dropdown-content {
-  float: right;
-}
+  .dropdown-content {
+    float: right;
+  }
 }
 
 header {

@@ -57,6 +57,65 @@ nav #discord {
   padding-bottom: 15px;
 }
 
+body {
+  background-color: #4A9183;
+  color: #FFF;
+  text-align: center;
+  line-height: 10px;
+  font-family: "Playfair Display", serif;
+  margin: 0;
+}
+
+body a {
+  color: #fff;
+}
+
+label, input {
+  display: inline-block;
+}
+
+label {
+  margin: 15px;
+}
+
+nav {
+  position: fixed;
+  top:-10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background-color: #fff;
+}
+
+nav h1 a {
+  margin:0;
+  padding:0;
+  float: left;
+  font-size: 30px;
+  padding-left: 20px;
+  margin:0;
+  text-decoration: none;
+  padding-top: 15px;
+}
+
+nav a {
+  float: right;
+  padding-top: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+  color: #4A9183;
+}
+
+nav #discord {
+  margin: 0;
+  padding: 0;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
 @media screen and (max-width: 725px) {
   /* The dropdown container */
   .dropdown {
@@ -110,9 +169,9 @@ nav #discord {
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  }
+}
 
-  @media screen and (min-width: 725px){
+@media screen and (min-width: 725px){
   .dropbtn {
     visibility: hidden;
   }
