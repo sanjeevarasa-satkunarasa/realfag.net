@@ -46,14 +46,15 @@ nav a {
   padding-top: 20px;
   padding-right: 20px;
   font-size: 20px;
-  color: #3c3c3c;
+  color: #4A9183;
 }
 
 nav #discord {
   margin: 0;
   padding: 0;
   padding-right: 20px;
-  padding-top: 10px;
+  padding-top: 18px;
+  padding-bottom: 15px;
 }
 
 @media screen and (max-width: 725px) {
@@ -178,7 +179,7 @@ header {
   padding: 0;
   float: right;
   position: relative;
-  background-color:#FDFCDC;
+  background-color:#4A9183;
   border: none;
 }
 

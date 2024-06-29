@@ -1,89 +1,129 @@
-* {
-  background-color: #1F1F1F !important;
-}
-
 body {
-  background-color: #fdfcdc;
-  color: #0F996D;
+  background-color: #282828;
+  color: #4A9183;
   text-align: center;
-  font-family:"Source Sans 3", sans-serif;
+  line-height: 25px;
+  font-family: "Playfair Display", serif;
   margin: 0;
 }
 
 body a {
-  color: #0F996D;
+  color: #4A9183;
+}
+
+label, input {
+  display: inline-block;
+}
+
+label {
+  margin: 15px;
 }
 
 nav {
   position: fixed;
-  padding-top: 20px;
+  top:-10px;
+  padding-top: 8px;
+  padding-bottom: 12px;
   left: 0;
   right: 0;
   z-index: 20;
+  background-color: #282828;
+}
+
+nav h1 a {
+  margin:0;
+  padding:0;
+  float: left;
+  font-size: 30px;
+  padding-left: 20px;
+  margin:0;
+  text-decoration: none;
+  padding-top: 15px;
+}
+
+nav a {
+  float: right;
+  padding-top: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+  color: #4A9183;
+}
+
+nav #discord {
+  margin: 0;
+  padding: 0;
+  padding-right: 20px;
+  padding-top: 18px;
+  padding-bottom: 15px;
+}
+
+@media screen and (max-width: 725px) {
+  /* The dropdown container */
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #fdfcdc;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+  margin-top: 10px;
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color:#db4a2b;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fdfcdc;
+  min-width: 160px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: #db4a2b;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
   background-color: #fdfcdc;
 }
 
-nav h1 {
-  float: left;
-  font-family: "Archivo Black", "Courier New", Courier, monospace;
-  font-size: 30px;
-  padding-left: 20px;
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 }
 
-nav a {
+@media screen and (min-width: 725px){
+.dropbtn {
+  visibility: hidden;
+}
+
+.dropdown-content {
   float: right;
-  padding-top: 15px;
-  padding-right: 20px;
-  font-size: 20px;
 }
-
-nav #discord {
-  margin: 0;
-  padding: 0;
-  padding-right: 20px;
-}
-
-nav a {
-  float: right;
-  padding-top: 15px;
-  padding-right: 20px;
-  font-size: 20px;
-}
-
-nav #discord {
-  margin: 0;
-  padding: 0;
-  padding-right: 20px;
 }
 
 header {
-  padding-top: 10px;
-}
-
-.row {
-  padding-top: 100px;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.column {
-  padding: 30px;
-  flex: 10%;
-}
-
-.column ul {
-  padding-right: 40px;
-}
-
-.column ul li {
-  list-style: none;
-  padding-top: 10px;
-}
-
-header {
-  padding-top: 100px;
+  padding-top: 120px;
 }
 
 .support {
@@ -102,6 +142,34 @@ header {
   padding-top: 10px;
 }
 
+
+.form {
+  background-color: #404040;
+  color: #4A9183;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  line-height: 10px;
+}
+
+.form-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.mentor-image {
+  width: 300px;
+  height: 200px;
+  padding-bottom: 20px;
+}
+
+.mentor-link {
+  font-size: 18px;
+}
+
 .project h1 {
   margin: 0;
 }
@@ -111,26 +179,79 @@ header {
   padding: 0;
   float: right;
   position: relative;
-  background-color:#1F1F1F;
+  background-color:#282828;
   border: none;
+}
+
+.banner {
+  background: #0C7C59;
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.banner__content {
+  padding: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.banner__text {
+  flex-grow: 1;
+  line-height: 1.4;
+  font-family: "Quicksand", sans-serif;
+}
+
+.banner__close {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.banner__text,
+.banner__close > span {
+  color: #ffffff;
 }
 
 footer {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 25px;
 }
 
 .version {
-  padding-top: 50px;
+  float: left;
   padding-left: 20px;
 }
 
-#problem {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 16px;
-  background-color:#1F1F1F;
-  border: none;
-  padding-top: 50px;
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: underline;
   padding-right: 20px;
-  padding-bottom: 20px;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: #404040;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -180px;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
 }
