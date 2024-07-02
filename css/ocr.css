@@ -1,0 +1,71 @@
+body {
+  background-color: #4A9183;
+  color: #FFF;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  margin: 0;
+}
+
+.ocr-program {
+  padding-top: 30px;
+}
+
+.ocr-program-heading {
+  display: inline-block;
+  width: 500px;
+  text-align: center; 
+}
+
+.question-form {
+  padding-top: 15px;
+}
+
+input {
+  cursor: pointer;
+}
+
+.question-text {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 20px 15px;
+  font-size: 16px;
+  font-family: "Playfair Display", serif;
+}
+
+#file-upload {
+  display: none;
+}
+.custom-file-upload {
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #FFF;
+  color: #696969;
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 100px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.question-submit {
+  padding: 10px 70px;
+  font-size: 16px;
+  font-family: "Playfair Display", serif;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.question-output-container {
+  display: inline-block;
+  width: 700px;
+  background-color: white;
+  color:#696969;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.question-output-container h4 {
+  float: left;
+  padding-left: 30px;
+}
