@@ -19,8 +19,8 @@ def get_all_file_paths(directory):
 
 def main(): 
 	# path to folder which needs to be zipped 
-	directory = 'eksamensoppgaver/1P' # EDIT THIS DIRECTOR
-	zip_filename = "1P" # EDIT THIS FILENAME
+	directory = 'eksamensoppgaver\Sosialkunnskap 2' # EDIT THIS DIRECTORY
+	zip_filename = "Sosialkunnskap 2" # EDIT THIS FILENAME
 
 	# calling function to get all file paths in the directory 
 	file_paths = get_all_file_paths(directory) 
