@@ -9,12 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <script src="/script/index.js"></script> <!--Remember to add this to index.html-->
 </head>
 <body>
     <div class="ocr-program">
         <h3 class="ocr-program-heading">Programmet som sammenligner dine oppgaver med vår database med eksamensoppgaver</h3>
-        <form class="question-form">
-            <textarea name="question" rows="6" cols="75" placeholder="Skriv inn oppgaven" class="question-text"></textarea>
+        <form class="question-form" method="POST" action="/script/index.js">
+            <textarea name="question-text" rows="6" cols="75" placeholder="Skriv inn oppgaven" class="question-text"></textarea>
             </br>
             <label for="file-upload" class="custom-file-upload"> Klikk for å laste opp filer</label>
             <input name="file-upload" id="file-upload" type="file"/>
