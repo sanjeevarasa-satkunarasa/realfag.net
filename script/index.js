@@ -1,5 +1,6 @@
 const form = document.getElementById('question-form');
-
+console.log(form)
+console.log("Hello World")
 // Form Validation
 
 form.addEventListener('submit', function(event) {
