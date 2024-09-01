@@ -181,8 +181,12 @@ nav #discord {
   }
 }
 
-header {
-  padding-top: 120px;
+.ambitions {
+  padding-top: 130px;
+}
+
+.ambitions-text {
+  padding-bottom: 15px;
 }
 
 .support {
