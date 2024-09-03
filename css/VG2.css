@@ -1,14 +1,14 @@
 body {
-  background-color: #4A9183;
-  color: #FFF;
+  background-color: #9966CC;
+  color: #FFF0F5;
   text-align: center;
   line-height: 10px;
-  font-family: "Playfair Display", serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
 }
 
 body a {
-  color: #fff;
+  color: #FFF0F5;
 }
 
 label, input {
@@ -27,7 +27,7 @@ nav {
   left: 0;
   right: 0;
   z-index: 20;
-  background-color: #fff;
+  background-color: #FFF0F5;
 }
 
 nav h1 a {
@@ -46,7 +46,7 @@ nav a {
   padding-top: 20px;
   padding-right: 20px;
   font-size: 20px;
-  color: #4A9183;
+  color: #9966CC;
 }
 
 nav #discord {
@@ -55,71 +55,6 @@ nav #discord {
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 15px;
-}
-
-@media screen and (max-width: 725px) {
-  /* The dropdown container */
-  .dropdown {
-    float: right;
-    overflow: hidden;
-  }
-
-  /* Dropdown button */
-  .dropdown .dropbtn {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: #fdfcdc;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 0; /* Important for vertical align on mobile phones */
-    margin-top: 10px;
-  }
-
-  /* Add a red background color to navbar links on hover */
-  .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color:#db4a2b;
-  }
-
-  /* Dropdown content (hidden by default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fdfcdc;
-    min-width: 160px;
-    z-index: 1;
-  }
-
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    float: none;
-    color: #db4a2b;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-
-  /* Add a grey background color to dropdown links on hover */
-  .dropdown-content a:hover {
-    background-color: #fdfcdc;
-  }
-
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 725px){
-  .dropbtn {
-    visibility: hidden;
-  }
-
-  .dropdown-content {
-    float: right;
-  }
 }
 
 header {
@@ -172,7 +107,7 @@ footer {
 .popup .popuptext {
   visibility: hidden;
   width: 300px;
-  background-color: #fff;
+  background-color: #FFF0F5;
   color: #000;
   text-align: center;
   border-radius: 6px;
