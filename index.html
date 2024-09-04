@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="nb">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css\styles.css" id="theme-style">
+    <link rel="stylesheet" href="style.css" id="theme-style">
     <title>Realfag.net</title>
     <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,12 +18,16 @@
 <body>
     <nav>
         <h1><a href="../index.html"> Realfag.net</a></h1>
-        <a id="discord" href="https://discord.gg/7AwyneAqgY" target="_blank"> <img src="/media/discord-logo.png" alt="discord-logo"> </a>
-        <div>
-            <a href="/html/VG3.html"> VG3 </a>
-            <a href="/html/VG2.html"> VG2 </a>
-            <a href="/html/VG1.html"> VG1 </a>
-            <a href="/html/info.html"> Info </a>
+        <a id="discord" href="https://discord.gg/7AwyneAqgY" target="_blank"> <img src="/media/discord-logo.png"
+                alt="discord-logo"> </a>
+        <div class="dropdown">
+            <button class="dropbtn"><img src="/media/arrow_down.png"></button>
+            <div class="dropdown-content">
+                <a href="/html/VG3.html"> VG3 </a>
+                <a href="/html/VG2.html"> VG2 </a>
+                <a href="/html/VG1.html"> VG1 </a>
+                <a href="/html/info.html"> Info </a>
+            </div>
         </div>
     </nav>
     <div class="ambitions">
@@ -67,9 +72,8 @@
                 <input type="reset" value="Nullstill">
             </form>
         </div>
-        <br>
-        <a href="mailto:contact@realfag.net"> Alternativt send her (contact@realfag.net)! </a>
-        <p> </p>
+        <a href="mailto:contact@realfag.net" class="email"> Alternativt send her (contact@realfag.net)! </a>
+        <p></p>
     </div>
     <!--<a href="https://www.buymeacoffee.com/realfag"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&#x2615;&slug=realfag&button_colour=db4a2b&font_colour=ffffff&font_family=Lato&outline_colour=ffffff&coffee_colour=FFDD00" /></a> -->
     <div class="project">
@@ -80,17 +84,8 @@
     </div>
     <button onclick="toggleMode()" id="dark_button" async><img id="dark_button_img" src="/media/dark_darkmode.png"
             height="50px" width="50px" alt="mørk-modus knapp"></button>
-    <div class="banner">
-        <div class="banner__content">
-            <div class="banner__text"> ⚠️ Nettstedet er fortsatt under tung utvikling så forvent evt. problemer/mangler
-                ⚠️</div>
-            <button class="banner__close" onclick="closeBanner()" type="button">
-                <span class="material-icons">close</span>
-            </button>
-        </div>
-    </div>
     <footer>
-        <div class="version"> Versjon 1.2.2
+        <div class="version"> Versjon 1.2.1
             <a href="/html/logg.html"> Logg </a>
         </div>
         <div class="popup" onclick="popUp()" async> Rapporter et problem/forbedringer
@@ -107,4 +102,5 @@
         </div>
     </footer>
 </body>
+
 </html>
