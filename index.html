@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" id="theme-style">
+    <link rel="stylesheet" href="css\styles.css" id="theme-style">
     <title>Realfag.net</title>
     <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +18,7 @@
 <body>
     <nav>
         <h1><a href="../index.html"> Realfag.net</a></h1>
+        <a onclick="toggleMode()" id="dark_mode"><img src="/media/dark_mode_light.png" alt="mørk modus knapp"></a>
         <a id="discord" href="https://discord.gg/7AwyneAqgY" target="_blank"> <img src="/media/discord-logo.png"
                 alt="discord-logo"> </a>
         <div class="dropdown">
@@ -82,10 +83,8 @@
             alt="Video som viser hvordan OCR funker">Nettleseren din
             Nettleseren din støtter ikke denne videon</video>
     </div>
-    <button onclick="toggleMode()" id="dark_button" async><img id="dark_button_img" src="/media/dark_darkmode.png"
-            height="50px" width="50px" alt="mørk-modus knapp"></button>
     <footer>
-        <div class="version"> Versjon 1.2.1
+        <div class="version"> Versjon 1.2.2
             <a href="/html/logg.html"> Logg </a>
         </div>
         <div class="popup" onclick="popUp()" async> Rapporter et problem/forbedringer
