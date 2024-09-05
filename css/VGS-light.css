@@ -91,13 +91,15 @@ nav #discord {
   padding: 0;
   padding-right: 0.5rem;
   /* 8px */
+  padding-top: 0.625rem;
+
 }
 
 nav #discord img {
-  height: 2.5rem;
-  /* 40px */
-  width: 2.5rem;
-  /* 40px */
+  height: 2.25rem;
+  /* 36px */
+  width: 2.25rem;
+  /* 36px */
 }
 
 @media screen and (min-width: 750px) {
@@ -120,8 +122,10 @@ nav #discord img {
   }
 
   nav #discord {
-      padding-top: 0.625rem;
-      /* 10px */
+      padding-top: 1.25rem;
+      /* 20px */
+      padding-right: 2rem;
+      /* 32px */
   }
 
   nav #dark_mode {
@@ -130,8 +134,8 @@ nav #discord img {
 
   .dropbtn {
       margin: 0;
-      margin-left: 2.5rem;
-      /* 40px */
+      margin-left: 1.5rem;
+      /* 24px */
       margin-right: 0;
       display: block;
       float: right;
