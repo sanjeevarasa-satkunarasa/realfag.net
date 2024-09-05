@@ -1,20 +1,20 @@
 html {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 body {
-  background-color: #9966CC;
-  color: #FFF0F5;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  line-height: 1.25rem;
-  /* 20px */
-  margin: 0;
-  font-size: 1rem;
+    background-color: #9966CC;
+    color: #FFF0F5;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.25rem;
+    /* 20px */
+    margin: 0;
+    font-size: 1rem;
 }
 
 body a {
-  color: #FFF0F5;
+    color: #FFF0F5;
 }
 
 @media screen and (max-width: 725px) {
@@ -26,51 +26,51 @@ body a {
 
 label,
 input {
-  display: inline-block;
+    display: inline-block;
 }
 
 label {
-  margin: 0.9375rem;
-  /* 15px */
+    margin: 0.9375rem;
+    /* 15px */
 }
 
 nav {
-  position: fixed;
-  top: -0.625rem;
-  /* -10px */
-  padding-top: 1.25rem;
-  /* 20px */
-  padding-bottom: 2.5rem;
-  /* 40px */
-  left: 0;
-  right: 0;
-  z-index: 20;
-  color: #9966CC;
-  background-color: #FFF0F5;
+    position: fixed;
+    top: -0.625rem;
+    /* -10px */
+    padding-top: 1.25rem;
+    /* 20px */
+    padding-bottom: 2.5rem;
+    /* 40px */
+    left: 0;
+    right: 0;
+    z-index: 20;
+    color: #9966CC;
+    background-color: #FFF0F5;
 }
 
 nav h1 a {
-  margin: 0;
-  padding: 0;
-  float: left;
-  font-size: 1.875rem;
-  /* 30px */
-  padding-left: 1.25rem;
-  /* 20px */
-  text-decoration: none;
-  padding-top: 0.9375rem;
-  /* 15px */
+    margin: 0;
+    padding: 0;
+    float: left;
+    font-size: 1.875rem;
+    /* 30px */
+    padding-left: 1.25rem;
+    /* 20px */
+    text-decoration: none;
+    padding-top: 0.9375rem;
+    /* 15px */
 }
 
 nav a {
-  float: right;
-  padding-top: 1.25rem;
-  /* 20px */
-  padding-right: 1.25rem;
-  /* 20px */
-  font-size: 1.25rem;
-  /* 20px */
-  color: #9966CC;
+    float: right;
+    padding-top: 1.25rem;
+    /* 20px */
+    padding-right: 1.25rem;
+    /* 20px */
+    font-size: 1.25rem;
+    /* 20px */
+    color: #9966CC;
 }
 
 nav #dark_mode {
@@ -94,10 +94,10 @@ nav #discord {
 }
 
 nav #discord img {
-  height: 2.5rem;
-  /* 40px */
-  width: 2.5rem;
-  /* 40px */
+    height: 2.5rem;
+    /* 40px */
+    width: 2.5rem;
+    /* 40px */
 }
 
 @media screen and (min-width: 750px) {
@@ -191,79 +191,79 @@ nav #discord img {
 }
 
 .ambitions {
-  padding-top: 8.125rem;
-  /* 130px */
+    padding-top: 8.125rem;
+    /* 130px */
 }
 
 .ambitions-text {
-  padding-bottom: 0.9375rem;
-  /* 15px */
+    padding-bottom: 0.9375rem;
+    /* 15px */
 }
 
 .support {
-  padding-top: 0.5rem;
-  /* 8px */
+    padding-top: 0.5rem;
+    /* 8px */
 }
 
 .support h3 {
-  padding-top: 0.125rem;
-  /* 2px */
+    padding-top: 0.125rem;
+    /* 2px */
 }
 
 .support a {
-  font-size: 1.25rem;
-  /* 20px */
+    font-size: 1.25rem;
+    /* 20px */
 }
 
 .support p {
-  padding-top: 0.625rem;
-  /* 10px */
+    padding-top: 0.625rem;
+    /* 10px */
 }
 
 .form {
-  background-color: #FFF0F5;
-  color: #9966CC;
-  max-width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  width: 31.25rem;
-  /* 500px */
-  padding: 1.25rem;
-  /* 20px */
-  border-radius: 0.625rem;
-  /* 10px */
-  line-height: 0.625rem;
-  /* 10px */
+    background-color: #FFF0F5;
+    color: #9966CC;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    width: 31.25rem;
+    /* 500px */
+    padding: 1.25rem;
+    /* 20px */
+    border-radius: 0.625rem;
+    /* 10px */
+    line-height: 0.625rem;
+    /* 10px */
 }
 
 .form-title {
-  font-size: 1.25rem;
-  /* 20px */
-  font-weight: bold;
+    font-size: 1.25rem;
+    /* 20px */
+    font-weight: bold;
 }
 
 .mentor-image {
-  width: 18.75rem;
-  /* 300px */
-  height: 12.5rem;
-  /* 200px */
-  padding-bottom: 1.25rem;
-  /* 20px */
+    width: 18.75rem;
+    /* 300px */
+    height: 12.5rem;
+    /* 200px */
+    padding-bottom: 1.25rem;
+    /* 20px */
 }
 
 .mentor-link {
-  font-size: 1.125rem;
-  /* 18px */
+    font-size: 1.125rem;
+    /* 18px */
 }
 
 .project h1 {
-  margin: 0;
-  padding-bottom: 1.25rem;
-  /* 20px */
+    margin: 0;
+    padding-bottom: 1.25rem;
+    /* 20px */
 }
 
 .project video {
-  width: 90%;
+    width: 90%;
 }
 
 @media screen and (max-width: 725px) {
@@ -271,22 +271,22 @@ nav #discord img {
       height: 12.5rem;
       /* 200px */
 
-  }
+    }
 }
 
 footer {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 1.5625rem;
-  /* 25px */
-  padding-bottom: 1.5625rem;
-  /* 25px */
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5625rem;
+    /* 25px */
+    padding-bottom: 1.5625rem;
+    /* 25px */
 }
 
 .version {
-  float: left;
-  padding-left: 1.25rem;
-  /* 20px */
+    float: left;
+    padding-left: 1.25rem;
+    /* 20px */
 }
 
 @media screen and (max-width: 725px) {
@@ -298,12 +298,12 @@ footer {
 
 /* Popup container - can be anything you want */
 .popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: underline;
-  padding-right: 1.25rem;
-  /* 20px */
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: underline;
+    padding-right: 1.25rem;
+    /* 20px */
 }
 
 /* The actual popup */
@@ -329,5 +329,5 @@ footer {
 
 /* Toggle this class - hide and show the popup */
 .popup .show {
-  visibility: visible;
+    visibility: visible;
 }
