@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html lang="nb">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/css/logg.css" rel="stylesheet">
-    <title>Eksamensoppgaver</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/general.css" rel="stylesheet">
+    <title>Realfag.net</title>
+    <link rel="icon" type="image/x-icon" href="/media/favicon_light.ico" id="favicon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <script src="/script/script.js" defer></script>
 </head>
+
 <body>
     <nav>
-        <h1><a href="../index.html"> Realfag.net</a></h1>
-        <a id="discord" href="https://discord.gg/7AwyneAqgY" target="_blank"> <img src="/media/discord.png"
-                height=30px width=35px> </a>
+        <h1><a href="../index.html">Realfag.net</a></h1>
+        <!-- When clicked, this calls the JavaScript function to toggle the mode -->
+        <a onclick="toggleMode(false)" id="dark_mode">
+            <img src="/media/dark_mode_light.png" alt="mørk modus knapp" id="dark_mode_icon">
+        </a>
+        <a id="discord" href="https://discord.gg/7AwyneAqgY" target="_blank">
+            <img src="/media/discord_logo_light.png" alt="discord-logo" id="dark_mode_discord">
+        </a>
         <div class="dropdown">
-            <button class="dropbtn"> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fdfcdc"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg> <!--From Google Icons-->
-                <i class="fa fa-caret-down"></i>
-            </button>
+            <button class="dropbtn"><img src="/media/arrow_down.png"></button>
             <div class="dropdown-content">
-                <a href="/html/info.html"> Info </a>
-                <a href="/html/VG3.html"> VG3 </a>
-              
-                <a href="/html/VG2.html"> VG2 </a>
-                  <a href="/html/VG1.html"> VG1 </a>
+                <a href="/html/VG3.html">VG3</a>
+                <a href="/html/VG2.html">VG2</a>
+                <a href="/html/VG1.html">VG1</a>
+                <a href="/html/info.html">Info</a>
             </div>
         </div>
     </nav>
@@ -38,7 +45,8 @@
             <li>Versjon 1.1.2 - Lagt til løsningsforslag for Kjemi og Fysikk</li>
             <li>Versjon 1.1.3 - Bug fiks og lagt til discord server</li>
             <li>Versjon 1.1.4 - Lagt til hvordan man laster ned løsningsforslag fra Aunivers</li>
-            <li>Versjon 1.1.5 - Lagt til flere eksamensoppgaver og inndelt fagene i ulike nettsider + promotion video for gjennkjennelse programmet </li>
+            <li>Versjon 1.1.5 - Lagt til flere eksamensoppgaver og inndelt fagene i ulike nettsider + promotion video
+                for gjennkjennelse programmet </li>
             <li>Version 1.1.6 - Lagt til flere eksamensoppgaver og lag til informasjon om falgvalg og realfag </li>
             <li>Version 1.1.7 - Lagt til en mørk versjon av nettstedet og bug fiks</li>
             <li>Version 1.1.8 - Lagt til en alternativ metode å sende inn filer på og rapportere problemer på</li>
@@ -48,8 +56,10 @@
             <li>Version 1.2.2 - Gjort at nettsiden også er fungerende på mobilversjonen</li>
             <li>Version 1.2.3 - Lagt til eksamensoppgaver for de på ungdomskolen</li>
             <li id="special">Framtiden - Legger til nasjonalprøver for de på barneskolen</li>
-            <li id="special">Framtiden - Legger til funksjon for å kunne sammenligne sin opplastet oppgave med vår database med eksamensoppgaver</li>
+            <li id="special">Framtiden - Legger til funksjon for å kunne sammenligne sin opplastet oppgave med vår
+                database med eksamensoppgaver</li>
         </ul>
     </div>
 </body>
+
 </html>

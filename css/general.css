@@ -7,8 +7,8 @@ body {
   color: #FFF0F5;
   text-align: center;
   font-family: "Poppins", sans-serif;
-  line-height: 1.25rem;
-  /* 20px */
+  line-height: 1.5rem;
+  /* 24px */
   margin: 0;
   font-size: 1rem;
   display: inline-block;
@@ -209,8 +209,8 @@ nav #discord img {
 /* Logg Styling*/
 .logg {
   position: relative;
-  padding-top: 10rem;
-  /* 160px*/
+  padding-top: 8rem;
+  /* 128px*/
   float: left;
 }
 
@@ -222,9 +222,7 @@ nav #discord img {
 
 #special {
   list-style: none;
-  text-decoration: underline;
-  font-size: 2rem;
-  /* 32px */
+  text-decoration:solid;
 }
 
 footer {
