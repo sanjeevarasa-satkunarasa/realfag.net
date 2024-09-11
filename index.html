@@ -4,43 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css" id="theme-style">
+    <link rel="stylesheet" href="css/styles.css" id="theme-style"> <!-- Default to light theme -->
     <title>Realfag.net</title>
     <link rel="icon" type="image/x-icon" href="/media/favicon_light.ico" id="favicon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
         rel="stylesheet">
-    <script src="/script/script.js"></script>
+    <script src="/script/script.js" defer></script>
 </head>
-<body>
+
+
+<body onload="applySavedTheme(false)"> <!-- Call the function on page load -->
     <nav>
-        <h1><a href="../index.html"> Realfag.net</a></h1>
-        <a onclick="toggleModeIndex()" id="dark_mode"><img src="/media/dark_mode_light.png" alt="mørk modus knapp"
-                id="dark_mode_icon"></a>
-        <a id="discord" href="https://discord.gg/7AwyneAqgY" target="_blank"> <img src="/media/discord_logo_light.png"
-                alt="discord-logo" id="dark_mode_discord"> </a>
+        <h1><a href="../index.html">Realfag.net</a></h1>
+        <!-- When clicked, this calls the JavaScript function to toggle the mode -->
+        <a onclick="toggleMode(false)" id="dark_mode">
+            <img src="/media/dark_mode_light.png" alt="mørk modus knapp" id="dark_mode_icon">
+        </a>
+        <a id="discord" href="https://discord.gg/7AwyneAqgY" target="_blank">
+            <img src="/media/discord_logo_light.png" alt="discord-logo" id="dark_mode_discord">
+        </a>
         <div class="dropdown">
             <button class="dropbtn"><img src="/media/arrow_down.png"></button>
             <div class="dropdown-content">
-                <a href="/html/VG3.html"> VG3 </a>
-                <a href="/html/VG2.html"> VG2 </a>
-                <a href="/html/VG1.html"> VG1 </a>
-                <a href="/html/info.html"> Info </a>
+                <a href="/html/VG3.html">VG3</a>
+                <a href="/html/VG2.html">VG2</a>
+                <a href="/html/VG1.html">VG1</a>
+                <a href="/html/info.html">Info</a>
             </div>
         </div>
     </nav>
+
     <div class="ambitions">
-        <h1 class="ambitions-text"> Nettstedet som gjør læring enkelt</h1>
+        <h1 class="ambitions-text">Nettstedet som gjør læring enkelt</h1>
         <h2 class="ambitions-text">Våre Ambisjoner</h2>
         <h3 class="ambitions-text">Vårt mål er å gjøre læring så enkelt så mulig</h3>
         <p class="ambitions-text">Dette er blant annet hvorfor vi har lagt ut eksamensoppgaver, oppgaveløsende program
-            og informasjon helt gratis! </p>
+            og informasjon helt gratis!</p>
     </div>
+
     <div class="support">
-        <h1> Støtt oss!</h1>
-        <h3> Støtt oss ved å gi dine oppgaver/prøver/løsningsforslag!</h3>
+        <h1>Støtt oss!</h1>
+        <h3>Støtt oss ved å gi dine oppgaver/prøver/løsningsforslag!</h3>
         <div class="form">
             <form netlify method="POST">
                 <label class="form-title">Skjema for innsending:</label>
@@ -87,18 +94,17 @@
                 <input type="reset" value="Nullstill">
             </form>
         </div>
-        <a href="mailto:contact@realfag.net" class="email"> Alternativt send her (contact@realfag.net)! </a>
-        <p></p>
+        <a href="mailto:contact@realfag.net" class="email">Alternativt send her (contact@realfag.net)!</a>
     </div>
-    <!--<a href="https://www.buymeacoffee.com/realfag"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&#x2615;&slug=realfag&button_colour=db4a2b&font_colour=ffffff&font_family=Lato&outline_colour=ffffff&coffee_colour=FFDD00" /></a> -->
+
     <div class="project">
         <h1>Framtidige Prosjekter</h1>
         <video src="/media/OCR Program AD.mp4" height="500px" width="750px" autoplay loop controls
-            alt="Video som viser hvordan OCR funker">Nettleseren din
-            Nettleseren din støtter ikke denne videon</video>
+            alt="Video som viser hvordan OCR funker">Nettleseren din støtter ikke denne videon</video>
     </div>
+
     <footer>
-        <div class="version"> Versjon 1.2.2
+        <div class="version">Versjon 1.2.2
             <a href="/html/logg.html"> Logg </a>
         </div>
         <div class="popup" onclick="popUp()" async> Rapporter et problem/forbedringer
