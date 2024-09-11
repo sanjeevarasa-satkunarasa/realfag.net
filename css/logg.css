@@ -1,140 +1,270 @@
-body {
-  background-color: #4A9183;
-  color: #FFF;
-  text-align: center;
+html {
+  font-size: 16px;
+}
 
-  font-family: "Playfair Display", serif;
+body {
+  background-color: #9966CC;
+  color: #FFF0F5;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.25rem;
+  /* 20px */
   margin: 0;
+  font-size: 1rem;
 }
 
 body a {
-  color: #fff;
+  color: #FFF0F5;
 }
 
-label, input {
+@media screen and (max-width: 725px) {
+  body {
+    line-height: 2.5rem;
+    /* 40px */
+  }
+}
+
+label,
+input {
   display: inline-block;
 }
 
 label {
-  margin: 15px;
+  margin: 0.9375rem;
+  /* 15px */
 }
 
 nav {
   position: fixed;
-  top:-10px;
-  padding-top: 6px;
-  padding-bottom: 12px;
+  top: -0.625rem;
+  /* -10px */
+  padding-top: 1.25rem;
+  /* 20px */
+  padding-bottom: 2.5rem;
+  /* 40px */
   left: 0;
   right: 0;
   z-index: 20;
-  background-color: #fff;
+  color: #9966CC;
+  background-color: #FFF0F5;
 }
 
 nav h1 a {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   float: left;
-  font-size: 30px;
-  padding-left: 20px;
-  margin:0;
+  font-size: 1.875rem;
+  /* 30px */
+  padding-left: 1.25rem;
+  /* 20px */
   text-decoration: none;
-  padding-top: 12px;
+  padding-top: 0.9375rem;
+  /* 15px */
 }
 
 nav a {
   float: right;
-  padding-top: 20px;
-  padding-right: 20px;
-  font-size: 20px;
-  color: #4A9183;
+  padding-top: 1.25rem;
+  /* 20px */
+  padding-right: 1.25rem;
+  /* 20px */
+  font-size: 1.25rem;
+  /* 20px */
+  color: #9966CC;
+}
+
+nav #dark_mode {
+  padding-top: 11px;
+  background-color: #FFF0F5;
+  border: none;
+}
+
+nav #dark_mode img {
+  height: 2rem;
+  /* 32px */
+  width: 2rem;
+  /* 32px */
 }
 
 nav #discord {
   margin: 0;
   padding: 0;
-  padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 15px;
+  padding-right: 0.5rem;
+  /* 8px */
+  padding-top: 0.625rem;
+
 }
 
-@media screen and (max-width: 725px) {
-  /* The dropdown container */
-  .dropdown {
+nav #discord img {
+  height: 2.25rem;
+  /* 36px */
+  width: 2.25rem;
+  /* 36px */
+}
+
+@media screen and (min-width: 750px) {
+  .dropbtn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  body {
+    padding-left: 1rem;
+    /* 16px */
+    padding-right: 1rem;
+    /* 16px */
+  }
+
+  nav {
+    padding-bottom: 0.3125rem;
+    /* 5px */
+  }
+
+  nav #discord {
+    padding-top: 1.25rem;
+    /* 20px */
+    padding-right: 2rem;
+    /* 32px */
+  }
+
+  nav #dark_mode {
+    display: none;
+  }
+
+  .dropbtn {
+    margin: 0;
+    margin-left: 1.5rem;
+    /* 24px */
+    margin-right: 0;
+    display: block;
     float: right;
-    overflow: hidden;
-  }
-
-  /* Dropdown button */
-  .dropdown .dropbtn {
-    font-size: 16px;
+    background-color: #FFF0F5;
+    padding: 1rem;
+    /* 16px */
+    font-size: 1rem;
+    /* 16px */
     border: none;
-    outline: none;
-    color: #fdfcdc;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 0; /* Important for vertical align on mobile phones */
-    margin-top: 10px;
+    cursor: pointer;
   }
 
-  /* Add a red background color to navbar links on hover */
-  .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color:#db4a2b;
+  .dropbtn img {
+    width: 3.125rem;
+    /* 50px */
+    height: 3.125rem;
+    /* 50px */
   }
 
-  /* Dropdown content (hidden by default) */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #fdfcdc;
-    min-width: 160px;
+    background-color: #f9f9f9;
+    max-width: 5rem;
+    /* 80px */
+    box-shadow: 0px 0.5rem 1rem 0px rgba(0, 0, 0, 0.2);
+    /* 0px 8px 16px */
     z-index: 1;
   }
 
-  /* Links inside the dropdown */
   .dropdown-content a {
-    float: none;
-    color: #db4a2b;
-    padding: 12px 16px;
+    color: black;
+    padding: 1.25rem;
+    /* 20px */
     text-decoration: none;
     display: block;
-    text-align: left;
+    text-align: center;
   }
 
-  /* Add a grey background color to dropdown links on hover */
-  .dropdown-content a:hover {
-    background-color: #fdfcdc;
+  .dropdown-content a:active {
+    background-color: #f1f1f1
   }
 
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
+  .dropdown:active .dropdown-content {
+
     display: block;
-  }
-}
-
-@media screen and (min-width: 725px){
-  .dropbtn {
-    visibility: hidden;
-  }
-
-  .dropdown-content {
-    float: right;
+    margin-top: 4.375rem;
+    /* 70px */
+    margin-left: 2rem;
+    /* 32px */
   }
 }
 
 .logg {
-    position: relative;
-    padding-top: 120px;
-    float: left;
+  position: relative;
+  padding-top: 120px;
+  float: left;
 }
 
 .logg ul li {
-    text-align: left;
-    padding-left: 10px;
+  text-align: left;
+  padding-left: 10px;
 }
 
 #special {
-    list-style: none;
-    text-decoration: underline;
-    font-size: 20px;
+  list-style: none;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5625rem;
+  /* 25px */
+  padding-bottom: 1.5625rem;
+  /* 25px */
+}
+
+.version {
+  float: left;
+  padding-left: 1.25rem;
+  /* 20px */
+}
+
+@media screen and (max-width: 725px) {
+  footer {
+    font-size: 0.75rem;
+    /* 12px */
+  }
+}
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: underline;
+  padding-right: 1.25rem;
+  /* 20px */
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 18.75rem;
+  /* 300px */
+  background-color: #FFF;
+  color: #000;
+  text-align: center;
+  border-radius: 0.375rem;
+  /* 6px */
+  padding: 0.625rem 0;
+  /* 10px 0 */
+  position: absolute;
+  z-index: 1;
+  bottom: 2rem;
+  /* 32px */
+  left: 50%;
+  margin-left: -10rem;
+  /* -160px */
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
 }
