@@ -3,8 +3,8 @@ html {
 }
 
 body {
-  background-color: #9966CC;
-  color: #FFF0F5;
+  background-color: #7339AC;
+  color: #FFFFFF;
   text-align: center;
   font-family: "Poppins", sans-serif;
   line-height: 1.25rem;
@@ -14,7 +14,7 @@ body {
 }
 
 body a {
-  color: #FFF0F5;
+  color: #FFFFFF;
 }
 
 @media screen and (max-width: 725px) {
@@ -45,8 +45,8 @@ nav {
   left: 0;
   right: 0;
   z-index: 20;
-  color: #9966CC;
-  background-color: #FFF0F5;
+  color: #7339AC;
+  background-color: #FFFFFF;
 }
 
 nav h1 a {
@@ -70,12 +70,12 @@ nav a {
   /* 20px */
   font-size: 1.25rem;
   /* 20px */
-  color: #9966CC;
+  color: #7339AC;
 }
 
 nav #dark_mode {
   padding-top: 11px;
-  background-color: #FFF0F5;
+  background-color: #FFFFFF;
   border: none;
 }
 
@@ -139,7 +139,7 @@ nav #discord img {
     margin-right: 0;
     display: block;
     float: right;
-    background-color: #FFF0F5;
+    background-color: #FFFFFF;
     padding: 1rem;
     /* 16px */
     font-size: 1rem;

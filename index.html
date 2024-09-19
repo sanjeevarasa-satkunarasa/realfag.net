@@ -49,16 +49,15 @@
 
     <div class="support">
         <h1>Støtt oss!</h1>
-        <h3>Støtt oss ved å gi dine oppgaver/prøver/løsningsforslag!</h3>
+        <h2>Støtt oss ved å gi dine oppgaver/prøver/løsningsforslag!</h2>
         <div class="form">
             <form netlify method="POST">
                 <label class="form-title">Skjema for innsending:</label>
                 <br>
                 <label for="year">Årstall (åååå)</label>
-                <input type="number" name="year" min="1950" max="2025">
+                <input type="number" name="year" id="year" min="1950" max="2025">
                 <br>
                 <label for="school">Skolenavn:</label>
-                <input list="school">
                 <datalist id="school">
                     <option value="Nydalen VGS">
                     <option value="Elvebakken VGS">
