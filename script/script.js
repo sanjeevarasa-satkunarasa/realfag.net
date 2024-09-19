@@ -24,12 +24,12 @@ function toggleMode(isVGS) {
 
   // Update image sources for both cases
   if (currentMode === "dark") {
-    document.getElementById("dark_mode_icon").src = "/media/dark_mode_dark.png";
-    document.getElementById("dark_mode_discord").src = "/media/discord_logo_dark.png";
+    document.getElementById("dark_mode_icon").src = "/media/dark_mode_dark.webp";
+    document.getElementById("dark_mode_discord").src = "/media/discord_logo_dark.webp";
     document.getElementById("favicon").src = "/media/favicon_dark.ico";
   } else {
-    document.getElementById("dark_mode_icon").src = "/media/dark_mode_light.png";
-    document.getElementById("dark_mode_discord").src = "/media/discord_logo_light.png";
+    document.getElementById("dark_mode_icon").src = "/media/dark_mode_light.webp";
+    document.getElementById("dark_mode_discord").src = "/media/discord_logo_light.webp";
     document.getElementById("favicon").src = "/media/favicon_light.ico";
   }
 
@@ -50,12 +50,12 @@ function applySavedTheme(isVGS) {
 
   // Update images based on saved theme
   if (savedTheme === 'dark') {
-    document.getElementById("dark_mode_icon").src = "/media/dark_mode_dark.png";
-    document.getElementById("dark_mode_discord").src = "/media/discord_logo_dark.png";
+    document.getElementById("dark_mode_icon").src = "/media/dark_mode_dark.webp";
+    document.getElementById("dark_mode_discord").src = "/media/discord_logo_dark.webp";
     document.getElementById("favicon").src = "/media/favicon_dark.ico";
   } else {
-    document.getElementById("dark_mode_icon").src = "/media/dark_mode_light.png";
-    document.getElementById("dark_mode_discord").src = "/media/discord_logo_light.png";
+    document.getElementById("dark_mode_icon").src = "/media/dark_mode_light.webp";
+    document.getElementById("dark_mode_discord").src = "/media/discord_logo_light.webp";
     document.getElementById("favicon").src = "/media/favicon_light.ico";
   }
 }
