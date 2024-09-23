@@ -8,7 +8,7 @@ def sorted_directory_listing_with_os_listdir(directory):
     sorted_items = sorted(items, reverse=True)
     return sorted_items
 
-sorted_array = sorted_directory_listing_with_os_listdir("eksamensoppgaver\Rettslære 2") # Set file directory
+sorted_array = sorted_directory_listing_with_os_listdir("eksamensoppgaver/10.trinn") # Set file directory
 
 full_list = []
 heading_list= []
