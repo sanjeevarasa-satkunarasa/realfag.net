@@ -3,24 +3,22 @@ html {
 }
 
 body {
-  background-color: #220e34;
-  color: #FFF0F5;
+  background-color: #220e34; /* Dark background */
+  color: #FFF0F5; /* Light text */
   text-align: center;
   font-family: "Poppins", sans-serif;
   line-height: 1.25rem;
-  /* 20px */
   margin: 0;
   font-size: 1rem;
 }
 
 body a {
-  color: #FFF0F5;
+  color: #FFF0F5; /* Light link color */
 }
 
 @media screen and (max-width: 725px) {
   body {
     line-height: 2.5rem;
-    /* 40px */
   }
 }
 
@@ -31,22 +29,18 @@ input {
 
 label {
   margin: 0.9375rem;
-  /* 15px */
 }
 
 nav {
   position: fixed;
   top: -0.625rem;
-  /* -10px */
   padding-top: 1.25rem;
-  /* 20px */
   padding-bottom: 2.5rem;
-  /* 40px */
   left: 0;
   right: 0;
   z-index: 20;
   color: #FFF0F5;
-  background-color: #220e34;
+  background-color: #220e34; /* Dark mode nav background */
 }
 
 nav h1 a {
@@ -54,52 +48,40 @@ nav h1 a {
   padding: 0;
   float: left;
   font-size: 1.875rem;
-  /* 30px */
   padding-left: 1.25rem;
-  /* 20px */
   text-decoration: none;
   padding-top: 0.9375rem;
-  /* 15px */
 }
 
 nav a {
   float: right;
   padding-top: 1.25rem;
-  /* 20px */
   padding-right: 1.25rem;
-  /* 20px */
   font-size: 1.25rem;
-  /* 20px */
-  color: #FFF0F5;
+  color: #FFF0F5; /* Light nav link color */
 }
 
 nav #dark_mode {
   padding-top: 11px;
-  background-color: #220e34;
+  background-color: #220e34; /* Dark button background */
   border: none;
 }
 
 nav #dark_mode img {
   height: 2rem;
-  /* 32px */
   width: 2rem;
-  /* 32px */
 }
 
 nav #discord {
   margin: 0;
   padding: 0;
   padding-right: 0.5rem;
-  /* 8px */
   padding-top: 0.625rem;
-
 }
 
 nav #discord img {
   height: 2.25rem;
-  /* 36px */
   width: 2.25rem;
-  /* 36px */
 }
 
 @media screen and (min-width: 750px) {
@@ -111,21 +93,16 @@ nav #discord img {
 @media screen and (max-width: 750px) {
   body {
     padding-left: 1rem;
-    /* 16px */
     padding-right: 1rem;
-    /* 16px */
   }
 
   nav {
     padding-bottom: 0.3125rem;
-    /* 5px */
   }
 
   nav #discord {
     padding-top: 1.25rem;
-    /* 20px */
     padding-right: 2rem;
-    /* 32px */
   }
 
   nav #dark_mode {
@@ -135,24 +112,19 @@ nav #discord img {
   .dropbtn {
     margin: 0;
     margin-left: 1.5rem;
-    /* 24px */
     margin-right: 0;
     display: block;
     float: right;
-    background-color: #FFF0F5;
+    background-color: #FFF0F5; /* Light button for mobile */
     padding: 1rem;
-    /* 16px */
     font-size: 1rem;
-    /* 16px */
     border: none;
     cursor: pointer;
   }
 
   .dropbtn img {
     width: 3.125rem;
-    /* 50px */
     height: 3.125rem;
-    /* 50px */
   }
 
   .dropdown {
@@ -165,109 +137,141 @@ nav #discord img {
     position: absolute;
     background-color: #f9f9f9;
     max-width: 5rem;
-    /* 80px */
     box-shadow: 0px 0.5rem 1rem 0px rgba(0, 0, 0, 0.2);
-    /* 0px 8px 16px */
     z-index: 1;
   }
 
   .dropdown-content a {
     color: black;
     padding: 1.25rem;
-    /* 20px */
     text-decoration: none;
     display: block;
     text-align: center;
   }
 
   .dropdown-content a:active {
-    background-color: #f1f1f1
+    background-color: #f1f1f1;
   }
 
   .dropdown:active .dropdown-content {
-
     display: block;
     margin-top: 4.375rem;
-    /* 70px */
     margin-left: 2rem;
-    /* 32px */
   }
 }
 
 .ambitions {
   padding-top: 8.125rem;
-  /* 130px */
 }
 
 .ambitions-text {
   padding-bottom: 0.9375rem;
-  /* 15px */
+}
+
+.ocr-program {
+  padding: 1rem;
+}
+
+.ocr-program-heading {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.question-form {
+  background-color: #391857;
+  color: #FFF0F5;
+  padding: 1.25rem;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.question-text {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+}
+
+.custom-file-upload {
+  margin-top: 1rem;
+  display: inline-block;
+  background-color: #7339AC;
+  color: #FFFFFF;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.question-submit {
+  margin-top: 1rem;
+  background-color: #7339AC;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.question-output-container {
+  color:#FFF0F5;
+  text-align: left;
+  margin-top: 2rem;
+  background-color: #391857;
+  padding: 30px;
+  margin-right: 200px;
+  margin-left: 200px;
+  border-radius: 8px;
 }
 
 .support {
   padding-top: 0.5rem;
-  /* 8px */
 }
 
 .support h3 {
   padding-top: 0.125rem;
-  /* 2px */
 }
 
 .support a {
   font-size: 1.25rem;
-  /* 20px */
 }
 
 .support p {
   padding-top: 0.625rem;
-  /* 10px */
 }
 
 .form {
-  background-color: #391857;
-  color: #FFF0F5;
+  background-color: #391857; /* Dark form background */
+  color: #FFF0F5; /* Light form text */
   max-width: fit-content;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1rem;
-  /* 16px */
   width: 31.25rem;
-  /* 500px */
   padding: 1.25rem;
-  /* 20px */
   border-radius: 0.625rem;
-  /* 10px */
   line-height: 0.625rem;
-  /* 10px */
 }
 
 .form-title {
   font-size: 1.25rem;
-  /* 20px */
   font-weight: bold;
 }
 
 .mentor-image {
   width: 18.75rem;
-  /* 300px */
   height: 12.5rem;
-  /* 200px */
   padding-bottom: 1.25rem;
-  /* 20px */
 }
 
 .mentor-link {
   font-size: 1.125rem;
-  /* 18px */
 }
 
 .project h1 {
   margin: 0;
-  padding-top: 2rem; 
-  /* 16px */
+  padding-top: 2rem;
   padding-bottom: 1.25rem;
-  /* 20px */
 }
 
 .project video {
@@ -277,8 +281,6 @@ nav #discord img {
 @media screen and (max-width: 725px) {
   .project video {
     height: 12.5rem;
-    /* 200px */
-
   }
 }
 
@@ -286,56 +288,43 @@ footer {
   display: flex;
   justify-content: space-between;
   padding-top: 1.5625rem;
-  /* 25px */
   padding-bottom: 1.5625rem;
-  /* 25px */
 }
 
 .version {
   float: left;
   padding-left: 1.25rem;
-  /* 20px */
 }
 
 @media screen and (max-width: 725px) {
   footer {
     font-size: 0.75rem;
-    /* 12px */
   }
 }
 
-/* Popup container - can be anything you want */
 .popup {
   position: relative;
   display: inline-block;
   cursor: pointer;
   text-decoration: underline;
   padding-right: 1.25rem;
-  /* 20px */
 }
 
-/* The actual popup */
 .popup .popuptext {
   visibility: hidden;
   width: 18.75rem;
-  /* 300px */
-  background-color: #220e34;
-  color: #FFF0F5;
+  background-color: #220e34; /* Dark popup background */
+  color: #FFF0F5; /* Light popup text */
   text-align: center;
   border-radius: 0.375rem;
-  /* 6px */
   padding: 0.625rem 0;
-  /* 10px 0 */
   position: absolute;
   z-index: 1;
   bottom: 2rem;
-  /* 32px */
   left: 50%;
   margin-left: -10rem;
-  /* -160px */
 }
 
-/* Toggle this class - hide and show the popup */
 .popup .show {
   visibility: visible;
 }

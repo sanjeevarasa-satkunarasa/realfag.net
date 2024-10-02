@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="nb">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="science, study tools, study tool, realfag, realfag.net" name="keywords"/>
+  <meta content="Nettstedet som gjør realfag enklere og har et oppgave gjennkjennelsesprogram" name="description"/>
+  <meta content="Nover Studio" name="author"/>
+  <link href="{{ url_for('static', filename='css/VGS-light.css') }}" id="theme-style" rel="stylesheet"/>
+  <title>
+   Realfag.net
+  </title>
+  <link href="{{ url_for('static', filename='images/favicon_light.ico') }}" id="favicon" rel="icon" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body onload="applySavedTheme(true)">
+  <nav>
+   <h1>
+    <a href="../index.html">
+     Realfag.net
+    </a>
+   </h1>
+   <a id="dark_mode" onclick="toggleModeVGS()">
+    <img alt="mørk modus knapp" id="dark_mode_icon" src="{{ url_for('static', filename='images/dark_mode_light.webp') }}"/>
+   </a>
+   <a href="https://discord.gg/7AwyneAqgY" id="discord" target="_blank">
+    <img alt="discord-logo" id="dark_mode_discord" src="{{ url_for('static', filename='images/discord_logo_light.webp') }}"/>
+   </a>
+   <div class="dropdown">
+    <button class="dropbtn">
+     <img alt="dropdown button" src="{{ url_for('static', filename='images/arrow_down.webp') }}"/>
+    </button>
+    <div class="dropdown-content">
+     <a href="{{ url_for('static', filename='/templates/VG3.html') }}">
+      VG3
+     </a>
+     <a href="{{ url_for('static', filename='/templates/VG2.html') }}">
+      VG2
+     </a>
+     <a href="{{ url_for('static', filename='/templates/VG1.html') }}">
+      VG1
+     </a>
+     <a href="{{ url_for('static', filename='/templates/info.html') }}">
+      Info
+     </a>
+    </div>
+   </div>
+  </nav>
+  <div class="row">
+   <div class="column">
+    <h1 class="subject-title">
+     1T
+    </h1>
+    <ul>
+     <li>
+      <h3>
+       V2024
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_V2024.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2023
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_H2023.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2023
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_V2023.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2022
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_H2022.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2022
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_V2022.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2021
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_H2021.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_H2021_eksempel.pdf') }}" target="_blank">
+       Oppgave (Eksempel)
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2021
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_V2021.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2020
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_H2020.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2020
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_V2020.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2019
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_H2019.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2019
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_V2019.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2018
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_H2018.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2018
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_V2018.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2017
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_H2017.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2017
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_V2017.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2016
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_H2016.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2016
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_V2016.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2015
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_H2015.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2015
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_V2015.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_V2015_eksempel.pdf') }}" target="_blank">
+       Oppgave (Eksempel)
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2014
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_H2014.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2014
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_V2014.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2013
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_H2013.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2013
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_V2013.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2012
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_H2012.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2012
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_V2012.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       Jan 2012
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_Jan_2012.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2011
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_H2011.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2011
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_V2011.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2010
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_H2010.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2010
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_V2010.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2009
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1T/Eksamen_1T_H2009.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       <a download="" href="{{ url_for('static', filename='/ZIP/1T.zip') }}" target="_blank">
+        Last ned alle som .zip
+       </a>
+      </h3>
+     </li>
+    </ul>
+   </div>
+   <div class="column">
+    <h1 class="subject-title">
+     1P
+    </h1>
+    <ul>
+     <li>
+      <h3>
+       V2024
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_V2024.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2023
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_H2023.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2023
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_V2023.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2022
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_H2022.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2022
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_V2022.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2021
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_H2021.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_H2021_eksempel.pdf') }}" target="_blank">
+       Oppgave (Eksempel)
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2021
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_V2021.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_V2021_eksempel.pdf') }}" target="_blank">
+       Oppgave
+                        (Eksempel)
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2020
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_H2020.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2020
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_V2020.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2019
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_H2019.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2019
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_V2019.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2018
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_H2018.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2018
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_V2018.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2017
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_H2017.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2017
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_V2017.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2016
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_H2016.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2016
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_V2016.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2015
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_H2015.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2015
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_V2015.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_V2015_eksempel.pdf') }}" target="_blank">
+       Oppgave (Eksempel)
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2014
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_H2014.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2014
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_V2014.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2013
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_H2013.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2013
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_V2013.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2012
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_H2012.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2012
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_V2012.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2011
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_H2011.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2011
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_V2011.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       H2010
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_H2010.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       V2010
+      </h3>
+     </li>
+     <li>
+      <a download="" href="{{ url_for('static', filename='/eksamensoppgaver/1P/Eksamen_1P_V2010.pdf') }}" target="_blank">
+       Oppgave
+      </a>
+     </li>
+     <li>
+      <h3>
+       <a download="" href="{{ url_for('static', filename='/ZIP/1P.zip') }}" target="_blank">
+        Last ned alle som .zip
+       </a>
+      </h3>
+     </li>
+    </ul>
+   </div>
+  </div>
+  <footer>
+   <div class="version">
+    Versjon 1.2.2
+    <a href="{{ url_for('static', filename='/templates/logg.html') }}">
+     Logg
+    </a>
+   </div>
+   <div async="" class="popup" onclick="popUp()">
+    Rapporter et problem/forbedringer
+    <span class="popuptext" id="myPopup">
+     <form method="POST" netlify="">
+      <label for="problem-text">
+       Oppgi Problemet ditt:
+      </label>
+      <br/>
+      <textarea cols="40" id="problem-text" rows="10"></textarea>
+      <br/>
+      <input type="submit" value="Send inn"/>
+     </form>
+     <button onclick="popUpClose()">
+      Lukk
+     </button>
+    </span>
+   </div>
+  </footer>
+ </body>
+ <script src="{{ url_for('static', filename='../script/script.js') }}">
+ </script>
+</html>

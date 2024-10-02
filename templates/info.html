@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="nb">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="science, study tools, study tool, realfag, realfag.net" name="keywords"/>
+  <meta content="Nettstedet som gjør realfag enklere og har et oppgave gjennkjennelsesprogram" name="description"/>
+  <meta content="Nover Studio" name="author"/>
+  <link href="{{ url_for('static', filename='css/general.css') }}" rel="stylesheet"/>
+  <title>
+   Realfag.net
+  </title>
+  <link href="{{ url_for('static', filename='images/favicon_light.ico') }}" id="favicon" rel="icon" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body onload="applySavedTheme(false)">
+  <!-- Call the function on page load -->
+  <nav>
+   <h1>
+    <a href="index.html">
+     Realfag.net
+    </a>
+   </h1>
+   <!-- When clicked, this calls the JavaScript function to toggle the mode -->
+   <a id="dark_mode" onclick="toggleMode(false)">
+    <img alt="mørk modus knapp" id="dark_mode_icon" src="{{ url_for('static', filename='images/dark_mode_light.webp') }}"/>
+   </a>
+   <a href="https://discord.gg/7AwyneAqgY" id="discord" target="_blank">
+    <img alt="discord-logo" id="dark_mode_discord" src="{{ url_for('static', filename='images/discord_logo_light.webp') }}"/>
+   </a>
+   <div class="dropdown">
+    <button class="dropbtn">
+     <img alt="dropdown button" src="{{ url_for('static', filename='images/arrow_down.webp') }}"/>
+    </button>
+    <div class="dropdown-content">
+     <a href="{{ url_for('static', filename='templates/VG3.html') }}">
+      VG3
+     </a>
+     <a href="{{ url_for('static', filename='templates/VG2.html') }}">
+      VG2
+     </a>
+     <a href="{{ url_for('static', filename='templates/VG1.html') }}">
+      VG1
+     </a>
+     <a href="{{ url_for('static', filename='templates/info.html') }}">
+      Info
+     </a>
+    </div>
+   </div>
+  </nav>
+  <div class="important-links">
+   <h2>
+    Viktigste Lenkene
+   </h2>
+   <p>
+    Informasjon om tilleggspoeng finner du
+    <a href="https://www.samordnaopptak.no/info/opptak/opptak-uhg/poengberegning/legge-til-poeng/realfagspoeng/" target="_blank">
+     her
+    </a>
+   </p>
+  </div>
+  <div class="math-choice">
+   <h2>
+    Hvilken matematikk bør jeg velge?
+   </h2>
+   <p>
+    P-matte: Praktisk matematikk kan brukes til å kommme inn på de aller fleste studier
+   </p>
+   <p>
+    T-matte: Teoretisk matematikk, noen studier krever dette ettersom de krever R eller S-matte, lurt å ta hvis
+            man går realfag
+   </p>
+   <p>
+    S-matte: Samfunnsorientert matematikk, det som skiller det fra R-matten er sannsynlighet og statistikk
+   </p>
+   <p>
+    R-matte: Realfaglig matematikk, det som skiller det fra S-matten er vektorer (geometri) og et mer teoretisk
+            matte
+            en S-matte
+   </p>
+   <p>
+    OBS! Det er lurt at man heller går R1 enn S1 fordi i den nye læreplanen er første halvdel av året for det
+            meste likt, bare på ulike nivå. Derfor kan det være lurt i studier som krever S1+S2 å heller kun ta R1 med
+            mindre man trenger tilleggspoengene fra de 2 fagene
+   </p>
+   <br/>
+   <img height="250px" src="{{ url_for('static', filename='images/matematikk_valg.webp') }}" width="auto"/>
+   <br/>
+   <strong>
+    Det anbefales ikke å gå den veien i stiplet linjen!
+   </strong>
+  </div>
+  <div class="language-choice">
+   <h2>
+    Hvilken språk trenger jeg og hvorfor tilleggspoeng får jeg?
+   </h2>
+   <ul>
+    <li>
+     fremmedspråk på ungdomsskolen + nivå I = nok fremmedspråk for vitnemål men ingen ekstrapoeng.
+    </li>
+    <li>
+     fremmedspråk på ungdomsskolen + nivå II = nok fremmedspråk for vitnemål + 0,5 poeng.
+    </li>
+    <li>
+     fremmedspråkpå ungdomsskolen + nivå III = nok fremmedspråk for vitnemål + 1,5 poeng.
+    </li>
+    <li>
+     engelsk/norsk fordypning på ungdomsskolen + nivå II = nok fremmedspråk for vitnemål men ingen
+                ekstrapoeng.
+    </li>
+    <li>
+     engelsk/norsk fordypning på ungdomsskolen + nivå III = nok fremmedspråk for vitnemål + 1,0 ekstrapoeng.
+    </li>
+   </ul>
+   <strong>
+    Kilde: https://stovner.vgs.no/for-elever-og-foresatte/karakterer-og-eksamen/morsmalseksamen/
+   </strong>
+  </div>
+  <footer>
+   <div class="version">
+    Versjon 1.2.3
+    <a href="{{ url_for('static', filename='templates/logg.html') }}">
+     Logg
+    </a>
+   </div>
+   <div async="" class="popup" onclick="popUp()">
+    Rapporter et problem/forbedringer
+    <span class="popuptext" id="myPopup">
+     <form method="POST" netlify="">
+      <label for="problem-text">
+       Oppgi Problemet ditt:
+      </label>
+      <br/>
+      <textarea cols="40" id="problem-text" rows="10"></textarea>
+      <br/>
+      <input type="submit" value="Send inn"/>
+     </form>
+     <button onclick="popUpClose()">
+      Lukk
+     </button>
+    </span>
+   </div>
+  </footer>
+ </body>
+ <script src="{{ url_for('static', filename='js/script.js') }}">
+ </script>
+</html>

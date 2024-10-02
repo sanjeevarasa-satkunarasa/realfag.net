@@ -163,7 +163,7 @@ nav #discord img {
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #FFFFFF;
     max-width: 5rem;
     /* 80px */
     box-shadow: 0px 0.5rem 1rem 0px rgba(0, 0, 0, 0.2);
@@ -202,6 +202,63 @@ nav #discord img {
 .ambitions-text {
   padding-bottom: 0.9375rem;
   /* 15px */
+}
+
+.ocr-program {
+  padding: 1rem;
+}
+
+.ocr-program-heading {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.question-form {
+  background-color: #FFFFFF;
+  color: #7339AC;
+  padding: 1.25rem;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.question-text {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+}
+
+.custom-file-upload {
+  margin-top: 1rem;
+  display: inline-block;
+  background-color: #7339AC;
+  color: #FFFFFF;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.question-submit {
+  margin-top: 1rem;
+  background-color: #7339AC;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.question-output-container {
+  color:#7339AC;
+  text-align: left;
+
+  margin-top: 2rem;
+  background-color: #FFFFFF;
+  padding: 30px;
+  margin-right: 200px;
+  margin-left: 200px;
+  border-radius: 8px;
 }
 
 .support {
