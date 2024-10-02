@@ -7,7 +7,7 @@
     <meta name="keywords" content="science, study tools, study tool, realfag, realfag.net">
     <meta name="description" content="Nettstedet som gjør realfag enklere og har et oppgave gjennkjennelsesprogram">
     <meta name="author" content="Nover Studio">
-    <link rel="stylesheet" href="static/css/VGS-light.css" id="theme-style">
+    <link rel="stylesheet" href="static/css/school-light.css" id="theme-style">
     <title>Realfag.net</title>
     <link rel="icon" type="image/x-icon" href="static/images/favicon_light.ico" id="favicon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,10 +20,10 @@
 <body onload="applySavedTheme(true)">
     <nav>
         <h1><a href="index.html"> Realfag.net</a></h1>
-        <a onclick="toggleModeVGS()" id="dark_mode"><img src="static/images/dark_mode_light.webp" alt="mørk modus knapp"
-                id="dark_mode_icon"></a>
-        <a id="discord" href="https://discord.gg/7AwyneAqgY" target="_blank"> <img src="static/images/discord_logo_light.webp"
-                alt="discord-logo" id="dark_mode_discord"> </a>
+        <a onclick="toggleMode(true)" id="dark_mode"><img src="static/images/dark_mode_light.webp"
+                alt="mørk modus knapp" id="dark_mode_icon"></a>
+        <a id="discord" href="https://discord.gg/7AwyneAqgY" target="_blank"> <img
+                src="static/images/discord_logo_light.webp" alt="discord-logo" id="dark_mode_discord"> </a>
         <div class="dropdown">
             <button class="dropbtn"><img src="static/images/arrow_down.webp" alt="dropdown button"></button>
             <div class="dropdown-content">
@@ -38,61 +38,164 @@
         <div class="column">
             <h1 class="subject-title">10.trinn</h1>
             <ul>
-                <li><h2>V2024</h2></li>
-                <li><h3>Del 1</h3></li>
+                <li>
+                    <h2>V2024</h2>
+                </li>
+                <li>
+                    <h3>Del 1</h3>
+                </li>
                 <li><a href="eksamensoppgaver/10.trinn/10kl_V24_del1-1.pdf" target="_blank" download> Oppgave </a></li>
-                <li><h2>Del 2</h2></li>
+                <li>
+                    <h2>Del 2</h2>
+                </li>
                 <li><a href="eksamensoppgaver/10.trinn/10kl_V24_del2-1.pdf" target="_blank" download> Oppgave </a></li>
-                <li><h2>V2023</h2></li>
-                <li><h3>Del 1</h3></li>
-                <li><a href="eksamensoppgaver/10.trinn/10kl V23 LK20 del 1-1.pdf" target="_blank" download> Oppgave </a></li>
-                <li><h3>Del 2</h3></li>
-                <li><a href="eksamensoppgaver/10.trinn/10kl V23 LK20 del 2-1.pdf" target="_blank" download> Oppgave </a></li>
-                <li><h2>H2022</h2></li>
-                <li><h3>Del 1</h3></li>
-                <li><a href="eksamensoppgaver/10.trinn/10-kl-eksamen-eksempel-uten-hjelpemidler_jan22-1.pdf" target="_blank" download> Oppgave </a></li>
-                <li><h3>Del 2</h3></li>
-                <li><a href="eksamensoppgaver/10.trinn/10-kl-eksamen-eksempel-med-hjelpemidler_jan22-1.pdf" target="_blank" download> Oppgave </a></li>    
-                <li><h2>V2022</h2></li>
-                <li><h3>Del 1</h3></li>
-                <li><a href="eksamensoppgaver/10.trinn/MAT0015_Matematikk_10_årstrinn_Del_1_V22-1.pdf" target="_blank" download> Oppgave </a></li>
-                <li><h3>Del 2</h3></li>
-                <li><a href="eksamensoppgaver/10.trinn/MAT0015_Matematikk_10_årstrinn_Del_2_V22-1.pdf" target="_blank" download> Oppgave </a></li>
-                <li><h2>H2021</h2></li>
-                <li><h3>Del 1</h3></li>
-                <li><a href="eksamensoppgaver/10.trinn/Eksempel US Fagfornyelsen høst 2021 uten hjelpemidler.pdf" target="_blank" download> Oppgave </a></li>
-                <li><h3>Del 2</h3></li>
-                <li><a href="eksamensoppgaver/10.trinn/Eksempel US Fagfornyelsen høst 2021 med hjelpemidler.pdf" target="_blank" download> Oppgave </a></li>
-                <li><h2>Eksempel 2021</h2></li>
-                <li><a href="eksamensoppgaver/10.trinn/Eksempeleksamen ungdomstrinnet 2021.pdf" target="_blank" download> Oppgave </a></li>
-                <li><h2>V2021</h2></li>
-                <li><h3>Del 1</h3></li>
-                <li><a href="eksamensoppgaver/10.trinn/Del 1-MAT1010_V21_bokmål.pdf" target="_blank" download> Oppgave </a></li>
-                <li><h3>Del 2</h3></li>
-                <li><a href="eksamensoppgaver/10.trinn/Del 2_MAT0010_V21_bokmål.pdf" target="_blank" download> Oppgave </a></li>
-                <li><h2>V2020</h2></li>
-                <li><h3>Del 1</h3></li>
-                <li><a href="eksamensoppgaver/10.trinn/Del1_MAT0010_P-V20_bokmål.pdf" target="_blank" download> Oppgave </a></li>
-                <li><h3>Del 2</h3></li>
-                <li><a href="eksamensoppgaver/10.trinn/Del2_MAT0010_P_V20_bokmål.pdf" target="_blank" download> Oppgave </a></li>
-                <li><h2>V2019</h2></li>
-                <li><h3>Del 1</h3></li>
+                <li>
+                    <h2>V2023</h2>
+                </li>
+                <li>
+                    <h3>Del 1</h3>
+                </li>
+                <li><a href="eksamensoppgaver/10.trinn/10kl V23 LK20 del 1-1.pdf" target="_blank" download> Oppgave </a>
+                </li>
+                <li>
+                    <h3>Del 2</h3>
+                </li>
+                <li><a href="eksamensoppgaver/10.trinn/10kl V23 LK20 del 2-1.pdf" target="_blank" download> Oppgave </a>
+                </li>
+                <li>
+                    <h2>H2022</h2>
+                </li>
+                <li>
+                    <h3>Del 1</h3>
+                </li>
+                <li><a href="eksamensoppgaver/10.trinn/10-kl-eksamen-eksempel-uten-hjelpemidler_jan22-1.pdf"
+                        target="_blank" download> Oppgave </a></li>
+                <li>
+                    <h3>Del 2</h3>
+                </li>
+                <li><a href="eksamensoppgaver/10.trinn/10-kl-eksamen-eksempel-med-hjelpemidler_jan22-1.pdf"
+                        target="_blank" download> Oppgave </a></li>
+                <li>
+                    <h2>V2022</h2>
+                </li>
+                <li>
+                    <h3>Del 1</h3>
+                </li>
+                <li><a href="eksamensoppgaver/10.trinn/MAT0015_Matematikk_10_årstrinn_Del_1_V22-1.pdf" target="_blank"
+                        download> Oppgave </a></li>
+                <li>
+                    <h3>Del 2</h3>
+                </li>
+                <li><a href="eksamensoppgaver/10.trinn/MAT0015_Matematikk_10_årstrinn_Del_2_V22-1.pdf" target="_blank"
+                        download> Oppgave </a></li>
+                <li>
+                    <h2>H2021</h2>
+                </li>
+                <li>
+                    <h3>Del 1</h3>
+                </li>
+                <li><a href="eksamensoppgaver/10.trinn/Eksempel US Fagfornyelsen høst 2021 uten hjelpemidler.pdf"
+                        target="_blank" download> Oppgave </a></li>
+                <li>
+                    <h3>Del 2</h3>
+                </li>
+                <li><a href="eksamensoppgaver/10.trinn/Eksempel US Fagfornyelsen høst 2021 med hjelpemidler.pdf"
+                        target="_blank" download> Oppgave </a></li>
+                <li>
+                    <h2>Eksempel 2021</h2>
+                </li>
+                <li><a href="eksamensoppgaver/10.trinn/Eksempeleksamen ungdomstrinnet 2021.pdf" target="_blank"
+                        download> Oppgave </a></li>
+                <li>
+                    <h2>V2021</h2>
+                </li>
+                <li>
+                    <h3>Del 1</h3>
+                </li>
+                <li><a href="eksamensoppgaver/10.trinn/Del 1-MAT1010_V21_bokmål.pdf" target="_blank" download> Oppgave
+                    </a></li>
+                <li>
+                    <h3>Del 2</h3>
+                </li>
+                <li><a href="eksamensoppgaver/10.trinn/Del 2_MAT0010_V21_bokmål.pdf" target="_blank" download> Oppgave
+                    </a></li>
+                <li>
+                    <h2>V2020</h2>
+                </li>
+                <li>
+                    <h3>Del 1</h3>
+                </li>
+                <li><a href="eksamensoppgaver/10.trinn/Del1_MAT0010_P-V20_bokmål.pdf" target="_blank" download> Oppgave
+                    </a></li>
+                <li>
+                    <h3>Del 2</h3>
+                </li>
+                <li><a href="eksamensoppgaver/10.trinn/Del2_MAT0010_P_V20_bokmål.pdf" target="_blank" download> Oppgave
+                    </a></li>
+                <li>
+                    <h2>V2019</h2>
+                </li>
+                <li>
+                    <h3>Del 1</h3>
+                </li>
                 <li><a href="eksamensoppgaver/10.trinn/2019MAT0010_del1.pdf" target="_blank" download> Oppgave </a></li>
-                <li><h3>Del 2</h3></li>
+                <li>
+                    <h3>Del 2</h3>
+                </li>
                 <li><a href="eksamensoppgaver/10.trinn/2019MAT0010_del2.pdf" target="_blank" download> Oppgave </a></li>
-                <li><h2>V2018</h2></li>
-                <li><h3>Del 1</h3></li>
+                <li>
+                    <h2>V2018</h2>
+                </li>
+                <li>
+                    <h3>Del 1</h3>
+                </li>
                 <li><a href="eksamensoppgaver/10.trinn/MAT0010-2018-1.pdf" target="_blank" download> Oppgave </a></li>
-                <li><h3>Del 2</h3></li>
+                <li>
+                    <h3>Del 2</h3>
+                </li>
                 <li><a href="eksamensoppgaver/10.trinn/MAT0010-2018-2.pdf" target="_blank" download> Oppgave </a></li>
-                <li><h2>V2017</h2></li>
-                <li><h3>Del 1</h3></li>
-                <li><a href="eksamensoppgaver/10.trinn/MAT0010_Matematikk_Del_1_V17_Bokmål.pdf" target="_blank" download> Oppgave </a></li>
-                <li><h3>Del 2</h3></li>
-                <li><a href="eksamensoppgaver/10.trinn/MAT0010_Matematikk_Del_2_V17_Bokmål.pdf" target="_blank" download> Oppgave </a></li>
+                <li>
+                    <h2>V2017</h2>
+                </li>
+                <li>
+                    <h3>Del 1</h3>
+                </li>
+                <li><a href="eksamensoppgaver/10.trinn/MAT0010_Matematikk_Del_1_V17_Bokmål.pdf" target="_blank"
+                        download> Oppgave </a></li>
+                <li>
+                    <h3>Del 2</h3>
+                </li>
+                <li><a href="eksamensoppgaver/10.trinn/MAT0010_Matematikk_Del_2_V17_Bokmål.pdf" target="_blank"
+                        download> Oppgave </a></li>
             </ul>
         </div>
     </div>
     <footer>
-        <div class="version"> Versjon 1.2.2
-            <a href="templates/log
+        <div class="version">
+            Versjon 1.2.2
+            <a href="{{ url_for('static', filename='/templates/logg.html') }}">
+                Logg
+            </a>
+        </div>
+        <div async="" class="popup" onclick="popUp()">
+            Rapporter et problem/forbedringer
+            <span class="popuptext" id="myPopup">
+                <form method="POST" netlify="">
+                    <label for="problem-text">
+                        Oppgi Problemet ditt:
+                    </label>
+                    <br />
+                    <textarea cols="40" id="problem-text" rows="10"></textarea>
+                    <br />
+                    <input type="submit" value="Send inn" />
+                </form>
+                <button onclick="popUpClose()">
+                    Lukk
+                </button>
+            </span>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

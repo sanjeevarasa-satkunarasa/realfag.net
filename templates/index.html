@@ -7,26 +7,33 @@
     <meta name="keywords" content="science, study tools, study tool, realfag, realfag.net">
     <meta name="description" content="Nettstedet som gjør realfag enklere og har et oppgave gjennkjennelsesprogram">
     <meta name="author" content="Nover Studio">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" id="theme-style"> <!-- Default to light theme -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" id="theme-style">
+    <!-- Default to light theme -->
     <title>Realfag.net</title>
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon_light.ico') }}" id="favicon">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon_light.ico') }}"
+        id="favicon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body onload="applySavedTheme(false)"> <!-- Call the function on page load -->
     <nav>
-        <h1><a href="{{ url_for('index') }}">Realfag.net</a></h1>
+        <h1><a href="{{ url_for('static', filename='/templates/index.html') }}">Realfag.net</a></h1>
         <!-- When clicked, this calls the JavaScript function to toggle the mode -->
         <a onclick="toggleMode(false)" id="dark_mode">
-            <img src="{{ url_for('static', filename='images/dark_mode_light.webp') }}" alt="mørk modus knapp" id="dark_mode_icon">
+            <img src="{{ url_for('static', filename='images/dark_mode_light.webp') }}" alt="mørk modus knapp"
+                id="dark_mode_icon">
         </a>
         <a id="discord" href="https://discord.gg/7AwyneAqgY" target="_blank">
-            <img src="{{ url_for('static', filename='images/discord_logo_light.webp') }}" alt="discord-logo" id="dark_mode_discord">
+            <img src="{{ url_for('static', filename='images/discord_logo_light.webp') }}" alt="discord-logo"
+                id="dark_mode_discord">
         </a>
         <div class="dropdown">
-            <button class="dropbtn"><img src="{{ url_for('static', filename='images/arrow_down.webp') }}" alt="dropdown button"></button>
+            <button class="dropbtn"><img src="{{ url_for('static', filename='images/arrow_down.webp') }}"
+                    alt="dropdown button"></button>
             <div class="dropdown-content">
                 <a href="{{ url_for('static', filename='templates/VG3.html') }}">VG3</a>
                 <a href="{{ url_for('static', filename='templates/VG2.html') }}">VG2</a>
@@ -41,7 +48,8 @@
     <div class="ocr-program">
         <h3 class="ocr-program-heading">Program som finner fram til oppgaven din</h3>
         <form class="question-form" action="/upload" method="post" enctype="multipart/form-data">
-            <textarea id="textInput" name="question-text" rows="6" cols="75" placeholder="Skriv inn oppgaven" class="question-text"></textarea>
+            <textarea id="textInput" name="question-text" rows="6" cols="75" placeholder="Skriv inn oppgaven"
+                class="question-text"></textarea>
             <br>
             <label for="file-upload" class="custom-file-upload"> Klikk for å laste opp filer</label>
             <input id="fileInput" name="file-upload" type="file" />
@@ -104,7 +112,7 @@
     </div>
     <footer>
         <div class="version">Versjon 1.2.3
-            <a  href="{{ url_for('static', filename='templates/logg.html') }}"> Logg </a>
+            <a href="{{ url_for('static', filename='templates/logg.html') }}"> Logg </a>
         </div>
         <div class="popup" onclick="popUp()" async> Rapporter et problem/forbedringer
             <span class="popuptext" id="myPopup">
