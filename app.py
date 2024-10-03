@@ -8,14 +8,16 @@ import numpy as np
 import re
 from PIL import Image
 
+from flask import Flask, request, redirect, url_for, flash, render_template
+import pymongo
+
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'
 app.config['UPLOAD_FOLDER'] = 'uploads'
 
 # MongoDB connection setup
-client = pymongo.MongoClient("mongodb://localhost:27017/")
+client = pymongo.MongoClient("mongodb+srv://ssanjeevarasa:9m8QBUEEQjW9pysP@results.szk52.mongodb.net/?retryWrites=true&w=majority&appName=results")
 db = client["admin"]
-
 # Get the collection
 collection = db["results"]
 
