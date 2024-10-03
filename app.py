@@ -17,7 +17,7 @@ app.config['UPLOAD_FOLDER'] = 'uploads'
 
 # MongoDB connection setup
 client = pymongo.MongoClient("mongodb+srv://ssanjeevarasa:9m8QBUEEQjW9pysP@results.szk52.mongodb.net/?retryWrites=true&w=majority&appName=results")
-db = client["admin"]
+db = client["test"]
 # Get the collection
 collection = db["results"]
 
