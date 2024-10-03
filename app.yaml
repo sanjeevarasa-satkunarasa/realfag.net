@@ -9,4 +9,4 @@ automatic_scaling:
   max_instances: 5
 
 env_variables:
-  MONGO_URI: 'your_mongodb_connection_string'
+  MONGO_URI: 'mongodb+srv://ssanjeevarasa:9m8QBUEEQjW9pysP@results.szk52.mongodb.net/?retryWrites=true&w=majority&appName=results'
