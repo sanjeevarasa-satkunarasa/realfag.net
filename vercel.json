@@ -5,6 +5,12 @@
         "src": "app.py",
         "use": "@vercel/node"
       }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/app.py"
+      }
     ]
   }
   
