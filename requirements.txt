@@ -1,4 +1,5 @@
 Flask
+Flask-Mail
 pymongo
 scikit-learn
 numpy

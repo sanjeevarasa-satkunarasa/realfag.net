@@ -21,11 +21,11 @@
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-J4FCTJJ2YD"></script>
         <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
 
-        gtag('config', 'G-J4FCTJJ2YD');
+                gtag('config', 'G-J4FCTJJ2YD');
         </script>
 </head>
 
@@ -142,32 +142,23 @@
                 </strong>
         </div>
         <footer>
-                <div class="version">
-                        Versjon 1.2.4
-                        <a href="{{ url_for('static', filename='templates/logg.html') }}">
-                                Logg
-                        </a>
+                <div class="version">Versjon 1.2.4
+                        <a href="{{ url_for('static', filename='templates/logg.html') }}"> Logg </a>
                 </div>
-                <div async="" class="popup" onclick="popUp()">
-                        Rapporter et problem/forbedringer
+                <div class="popup" onclick="popUp()" async> Rapporter et problem/forbedringer
                         <span class="popuptext" id="myPopup">
-                                <form method="POST" netlify="">
-                                        <label for="problem-text">
-                                                Oppgi Problemet ditt:
-                                        </label>
-                                        <br />
-                                        <textarea cols="40" id="problem-text" rows="10"></textarea>
-                                        <br />
-                                        <input type="submit" value="Send inn" />
+                                <form method="POST" action="{{ url_for('send_problem') }}">
+                                        <label for="problem-text">Oppgi Problemet ditt:</label>
+                                        <br>
+                                        <textarea id="problem-text" name="problem-text" rows="10" cols="40"></textarea>
+                                        <br>
+                                        <input type="submit" value="Send inn">
                                 </form>
-                                <button onclick="popUpClose()">
-                                        Lukk
-                                </button>
+                                <button onclick="popUpClose()">Lukk</button>
                         </span>
                 </div>
         </footer>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
-<script src="{{ url_for('static', filename='js/script.js') }}">
-</script>
 
 </html>

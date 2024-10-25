@@ -255,10 +255,14 @@ nav #discord img {
 
   margin-top: 2rem;
   background-color: #FFFFFF;
-  padding: 30px;
-  margin-right: 200px;
-  margin-left: 200px;
+  padding: 1.875rem;
+  margin-right: 12.5rem;
+  margin-left: 12.5rem;
   border-radius: 8px;
+}
+
+.question-output {
+  padding-left: 2rem;
 }
 
 .support {

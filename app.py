@@ -1,4 +1,5 @@
 from flask import Flask, request, redirect, url_for, flash, render_template
+from flask_mail import Mail, Message
 import os
 import subprocess
 import json
@@ -11,6 +12,15 @@ from PIL import Image
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'
 app.config['UPLOAD_FOLDER'] = 'uploads'
+
+# Configure Flask-Mail
+app.config['MAIL_SERVER'] = 'smtp.privateemail.com'
+app.config['MAIL_PORT'] = 465  # Use 587 for TLS/STARTTLS
+app.config['MAIL_USE_SSL'] = True  # Use False if using TLS/STARTTLS
+app.config['MAIL_USERNAME'] = 'contact@realfag.net'
+app.config['MAIL_PASSWORD'] = 'EtArg2mApbY)(rP'
+
+mail = Mail(app)
 
 # Function to load data from JSON
 def load_data():
@@ -100,6 +110,38 @@ def upload_file():
     else:
         output = "No input provided"
     return render_template('index.html', output=output)
+
+@app.route('/send_email', methods=['POST'])
+def send_email():
+    year = request.form['year']
+    school = request.form['school']
+    resource_type = request.form['resource_type']
+    file = request.files['file']
+    
+    msg = Message(subject=f"New Submission: {resource_type}", sender='contact@realfag.net', recipients=['contact@realfag.net'])
+    msg.body = f"Year: {year}\nSchool: {school}\nResource Type: {resource_type}"
+    
+    if file:
+        filename = file.filename
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        file.save(file_path)
+        with app.open_resource(file_path) as fp:
+            msg.attach(filename, "application/octet-stream", fp.read())
+    
+    mail.send(msg)
+    flash("Email sent successfully!")
+    return redirect(url_for('index'))
+
+@app.route('/send_problem', methods=['POST'])
+def send_problem():
+    problem_text = request.form['problem-text']
+    
+    msg = Message(subject="Problem Report", sender='contact@realfag.net', recipients=['contact@realfag.net'])
+    msg.body = f"Problem reported:\n\n{problem_text}"
+    
+    mail.send(msg)
+    flash("Problem reported successfully!")
+    return redirect(url_for('index'))
 
 @app.route('/static/templates/index.html')
 def index2():

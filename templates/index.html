@@ -20,11 +20,11 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J4FCTJJ2YD"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-J4FCTJJ2YD');
+        gtag('config', 'G-J4FCTJJ2YD');
     </script>
 </head>
 
@@ -73,7 +73,7 @@
         <h1>Støtt oss!</h1>
         <h2>Støtt oss ved å gi dine oppgaver/prøver/løsningsforslag!</h2>
         <div class="form">
-            <form netlify method="POST">
+            <form method="POST" action="{{ url_for('send_email') }}">
                 <label class="form-title">Skjema for innsending:</label>
                 <br>
                 <label for="year">Årstall (åååå)</label>
@@ -125,10 +125,10 @@
         </div>
         <div class="popup" onclick="popUp()" async> Rapporter et problem/forbedringer
             <span class="popuptext" id="myPopup">
-                <form netlify method="POST">
+                <form method="POST" action="{{ url_for('send_problem') }}">
                     <label for="problem-text">Oppgi Problemet ditt:</label>
                     <br>
-                    <textarea id="problem-text" rows="10" cols="40"></textarea>
+                    <textarea id="problem-text" name="problem-text" rows="10" cols="40"></textarea>
                     <br>
                     <input type="submit" value="Send inn">
                 </form>
