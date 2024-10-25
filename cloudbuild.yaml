@@ -1,15 +1,12 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/realfag-net-docker/realfag-net', '.']
+    args: ['build', '-t', 'gcr.io/realfag-net-docker/realfag-net:$COMMIT_SHA', '.']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/realfag-net-docker/realfag-net']
-
+    args: ['push', 'gcr.io/realfag-net-docker/realfag-net:$COMMIT_SHA']
 images:
-  - 'gcr.io/realfag-net-docker/realfag-net'
-
+  - 'gcr.io/realfag-net-docker/realfag-net:$COMMIT_SHA'
 substitutions:
-  _SERVICE_NAME: 'realfag-net'
-
+  _SERVICE_NAME: 'realfag-net-docker'
 steps:
   - name: 'gcr.io/cloud-builders/gcloud'
     entrypoint: 'bash'
@@ -17,6 +14,6 @@ steps:
       - '-c'
       - |
         gcloud run deploy $_SERVICE_NAME \
-          --image gcr.io/realfag-net-docker/realfag-net \
+          --image gcr.io/realfag-net-docker/realfag-net:$COMMIT_SHA \
           --platform managed \
           --region us-central1
