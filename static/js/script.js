@@ -1,7 +1,6 @@
 function toggleMode(isVGS) {
   const themeStyle = document.getElementById("theme-style");
   let currentMode;
-
   if (isVGS) {
       // VGS file toggle logic
       if (themeStyle.getAttribute("href") === "/static/css/school-light.css") {
@@ -21,7 +20,6 @@ function toggleMode(isVGS) {
           currentMode = "light";
       }
   }
-
   updateImageSources(currentMode);
   localStorage.setItem('theme', currentMode);
 }
@@ -29,13 +27,11 @@ function toggleMode(isVGS) {
 function applySavedTheme(isVGS) {
   const savedTheme = localStorage.getItem('theme') || 'light'; // Default to light if no theme is saved
   const themeStyle = document.getElementById("theme-style");
-
   if (isVGS) {
       themeStyle.href = savedTheme === 'dark' ? "/static/css/school-dark.css" : "/static/css/school-light.css";
   } else {
       themeStyle.href = savedTheme === 'dark' ? "/static/css/styles-dark.css" : "/static/css/styles.css";
   }
-
   updateImageSources(savedTheme);
 }
 
@@ -43,7 +39,6 @@ function updateImageSources(theme) {
   const darkModeIcon = document.getElementById("dark_mode_icon");
   const darkModeDiscord = document.getElementById("dark_mode_discord");
   const favicon = document.getElementById("favicon");
-
   if (theme === "dark") {
       darkModeIcon.src = "/static/images/dark_mode_dark.webp";
       darkModeDiscord.src = "/static/images/discord_logo_dark.webp";
@@ -52,6 +47,22 @@ function updateImageSources(theme) {
       darkModeIcon.src = "/static/images/dark_mode_light.webp";
       darkModeDiscord.src = "/static/images/discord_logo_light.webp";
       favicon.src = "/static/images/favicon_light.ico";
+  }
+}
+
+function toggleDropdown() {
+  document.getElementById("dropdown-content").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+          }
+      }
   }
 }
 
@@ -64,7 +75,3 @@ function popUpClose() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("hide");
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-  // Your code here
-});
