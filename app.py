@@ -101,5 +101,29 @@ def upload_file():
         output = "No input provided"
     return render_template('index.html', output=output)
 
+@app.route('/static/templates/index.html')
+def index2():
+    return render_template('index.html')
+
+@app.route('/static/templates/VG3.html')
+def VG3():
+    return render_template('VG3.html')
+
+@app.route('/static/templates/VG2.html')
+def VG2():
+    return render_template('VG2.html')
+
+@app.route('/static/templates/VG1.html')
+def VG1():
+    return render_template('VG1.html')
+
+@app.route('/static/templates/info.html')
+def info():
+    return render_template('info.html')
+
+@app.route('/static/templates/logg.html')
+def logg():
+    return render_template('logg.html')
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=True)
