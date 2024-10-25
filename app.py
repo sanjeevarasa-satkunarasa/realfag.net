@@ -8,9 +8,6 @@ import numpy as np
 import re
 from PIL import Image
 
-from flask import Flask, request, redirect, url_for, flash, render_template
-import pymongo
-
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'
 app.config['UPLOAD_FOLDER'] = 'uploads'
@@ -18,7 +15,6 @@ app.config['UPLOAD_FOLDER'] = 'uploads'
 # MongoDB connection setup
 client = pymongo.MongoClient("mongodb+srv://ssanjeevarasa:9m8QBUEEQjW9pysP@results.szk52.mongodb.net/?retryWrites=true&w=majority&appName=results")
 db = client["test"]
-# Get the collection
 collection = db["results"]
 
 # Function to insert into MongoDB
@@ -27,9 +23,9 @@ def insert_mongodb(key, value):
     result = collection.insert_one(document)
     print("Document inserted with ID:", result.inserted_id)
 
-# Function to convert Windows path to WSL path
-def convert_to_wsl_path(win_path):
-    return subprocess.run(['wsl', 'wslpath', '-a', win_path], capture_output=True, text=True).stdout.strip()
+# Function to convert Windows path to WSL path (No longer needed for Docker)
+# def convert_to_wsl_path(win_path):
+#     return subprocess.run(['wsl', 'wslpath', '-a', win_path], capture_output=True, text=True).stdout.strip()
 
 # Function to convert image files to PDF
 def convert_image_to_pdf(image_path):
@@ -42,16 +38,14 @@ def convert_image_to_pdf(image_path):
 def process_file(file_path):
     if file_path.lower().endswith(('.jpg', '.jpeg', '.png', '.bmp', '.gif', '.tiff')):
         file_path = convert_image_to_pdf(file_path)
-    
-    wsl_file_path = convert_to_wsl_path(file_path)
+        # wsl_file_path = convert_to_wsl_path(file_path)  # Not needed
     output_file = os.path.splitext(file_path)[0] + '_output.pdf'
-    wsl_output_file = convert_to_wsl_path(output_file)
+    # wsl_output_file = convert_to_wsl_path(output_file)  # Not needed
     sidecar_file = os.path.splitext(file_path)[0] + '.txt'
-    wsl_sidecar_file = convert_to_wsl_path(sidecar_file)
+    # wsl_sidecar_file = convert_to_wsl_path(sidecar_file)  # Not needed
     
     try:
-        result = subprocess.run(['wsl', 'ocrmypdf', '-l', 'nor', '--sidecar', wsl_sidecar_file, '--force-ocr', wsl_file_path, wsl_output_file], check=True, capture_output=True, text=True)
-        
+        result = subprocess.run(['ocrmypdf', '-l', 'nor', '--sidecar', sidecar_file, '--force-ocr', file_path, output_file], check=True, capture_output=True, text=True)
         if os.path.exists(sidecar_file):
             with open(sidecar_file, 'r', encoding='utf-8') as file:
                 content = file.read()
@@ -68,21 +62,15 @@ def get_most_similar_document_key(input_string, db_name, collection_name):
     client = pymongo.MongoClient("mongodb://localhost:27017/")
     db = client[db_name]
     collection = db[collection_name]
-
     documents = list(collection.find({}, collation={"locale": "nb"}))
     keys = [doc.get("key") for doc in documents]
     values = [doc.get("value", "") for doc in documents]
-
     values.append(input_string)
-
     vectorizer = TfidfVectorizer().fit_transform(values)
     vectors = vectorizer.toarray()
-
     cosine_similarities = cosine_similarity(vectors[-1:], vectors[:-1]).flatten()
-
     most_similar_index = np.argmax(cosine_similarities)
     most_similar_key = keys[most_similar_index]
-
     return most_similar_key
 
 # Function to format output
@@ -100,7 +88,6 @@ def index():
 def upload_file():
     text = request.form.get('question-text')
     file = request.files.get('file-upload')
-
     if text and file:
         flash("Det kan ikke være to inputter")
         return redirect(url_for('index'))
@@ -114,7 +101,6 @@ def upload_file():
         output = format_output(get_most_similar_document_key(normalized_text, "admin", "results"))
     else:
         output = "No input provided"
-
     return render_template('index.html', output=output)
 
 @app.route('/static/templates/index.html')
