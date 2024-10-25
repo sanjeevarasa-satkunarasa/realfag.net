@@ -13,7 +13,7 @@ steps:
     args:
       - '-c'
       - |
-        gcloud run deploy $_SERVICE_NAME \
+        gcloud run deploy realfag-net-docker \
           --image gcr.io/realfag-net-docker/realfag-net:$COMMIT_SHA \
           --platform managed \
           --region us-central1
