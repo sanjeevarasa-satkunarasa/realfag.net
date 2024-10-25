@@ -1,0 +1,22 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/realfag-net-docker/realfag-net', '.']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/realfag-net-docker/realfag-net']
+
+images:
+  - 'gcr.io/realfag-net-docker/realfag-net'
+
+substitutions:
+  _SERVICE_NAME: 'realfag-net'
+
+steps:
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        gcloud run deploy $_SERVICE_NAME \
+          --image gcr.io/realfag-net-docker/realfag-net \
+          --platform managed \
+          --region us-central1
