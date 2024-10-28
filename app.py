@@ -71,7 +71,7 @@ def process_file(file_path):
         return f'Unexpected error: {e}'
 
 # Function to get the most similar document key
-def get_most_similar_document_key(input_string):
+def get_most_similar_document_key(input_string, threshold=0.1):
     data = load_data()
     keys = list(data.keys())
     values = list(data.values())
@@ -80,8 +80,10 @@ def get_most_similar_document_key(input_string):
     vectors = vectorizer.toarray()
     cosine_similarities = cosine_similarity(vectors[-1:], vectors[:-1]).flatten()
     most_similar_index = np.argmax(cosine_similarities)
-    most_similar_key = keys[most_similar_index]
-    return most_similar_key
+    most_similar_score = cosine_similarities[most_similar_index]
+    if most_similar_score < threshold:
+        return None
+    return keys[most_similar_index]
 
 # Function to format output
 def format_output(output):
@@ -109,11 +111,19 @@ def upload_file():
         file_path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
         file.save(file_path)
         ocr_output = process_file(file_path)
-        output = format_output(get_most_similar_document_key(ocr_output))
+        most_similar_key = get_most_similar_document_key(ocr_output)
+        if most_similar_key:
+            output = format_output(most_similar_key)
+        else:
+            output = "Fant ikke oppgaven din"
 
     elif text:
         normalized_text = re.sub(r'\W+', ' ', text.lower())
-        output = format_output(get_most_similar_document_key(normalized_text))
+        most_similar_key = get_most_similar_document_key(normalized_text)
+        if most_similar_key:
+            output = format_output(most_similar_key)
+        else:
+            output = "Fant ikke oppgaven din"
 
     return render_template('index.html', output=output)
 
