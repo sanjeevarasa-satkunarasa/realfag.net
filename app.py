@@ -1,17 +1,21 @@
+import os
+import re
 from flask import Flask, request, redirect, url_for, flash, render_template
 from flask_mail import Mail, Message
-import os
 import subprocess
 import json
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
-import re
 from PIL import Image
 
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'
-app.config['UPLOAD_FOLDER'] = 'uploads'
+app.config['UPLOAD_FOLDER'] = 'uploads/'
+
+# Ensure the upload folder exists
+if not os.path.exists(app.config['UPLOAD_FOLDER']):
+    os.makedirs(app.config['UPLOAD_FOLDER'])
 
 # Configure Flask-Mail
 app.config['MAIL_SERVER'] = 'smtp.privateemail.com'
@@ -94,21 +98,23 @@ def index():
 def upload_file():
     text = request.form.get('question-text')
     file = request.files.get('file-upload')
+    
     if text and file:
         flash("Det kan ikke være to inputter")
         return redirect(url_for('index'))
-    elif file:
+    
+    output = "No input provided"
+    
+    if file:
         file_path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
         file.save(file_path)
         ocr_output = process_file(file_path)
-        data = {file.filename: ocr_output}
-        save_data(data)
         output = format_output(get_most_similar_document_key(ocr_output))
+
     elif text:
         normalized_text = re.sub(r'\W+', ' ', text.lower())
         output = format_output(get_most_similar_document_key(normalized_text))
-    else:
-        output = "No input provided"
+
     return render_template('index.html', output=output)
 
 @app.route('/send_email', methods=['POST'])
@@ -117,17 +123,19 @@ def send_email():
     school = request.form['school']
     resource_type = request.form['resource_type']
     file = request.files['file']
-    
-    msg = Message(subject=f"New Submission: {resource_type}", sender='contact@realfag.net', recipients=['contact@realfag.net'])
+
+    msg = Message(subject=f"New Submission: {resource_type}",
+                  sender='contact@realfag.net',
+                  recipients=['contact@realfag.net'])
     msg.body = f"Year: {year}\nSchool: {school}\nResource Type: {resource_type}"
-    
+
     if file:
         filename = file.filename
         file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
         file.save(file_path)
         with app.open_resource(file_path) as fp:
             msg.attach(filename, "application/octet-stream", fp.read())
-    
+
     mail.send(msg)
     flash("Email sent successfully!")
     return redirect(url_for('index'))
