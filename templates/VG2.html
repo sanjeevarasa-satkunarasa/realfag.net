@@ -34,23 +34,13 @@
         src="{{ url_for('static', filename='images/discord_logo_light.webp') }}" />
     </a>
     <div class="dropdown">
-      <button class="dropbtn">
-        <img alt="dropdown button" src="{{ url_for('static', filename='images/arrow_down.webp') }}" />
-      </button>
-      <div class="dropdown-content">
-        <a href="{{ url_for('static', filename='/templates/VG3.html') }}">
-          VG3
-        </a>
-        <a href="{{ url_for('static', filename='/templates/VG2.html') }}">
-          VG2
-        </a>
-        <a href="{{ url_for('static', filename='/templates/VG1.html') }}">
-          VG1
-        </a>
-        <a href="{{ url_for('static', filename='/templates/info.html') }}">
-          Info
-        </a>
+      <div class="dropdown-content" id="dropdown-content">
+          <a href="{{ url_for('VG3') }}">VG3</a>
+          <a href="{{ url_for('VG2') }}">VG2</a>
+          <a href="{{ url_for('VG1') }}">VG1</a>
+          <a href="{{ url_for('info') }}">Info</a>
       </div>
+  </div>
     </div>
   </nav>
   <div class="row">
