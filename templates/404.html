@@ -38,76 +38,8 @@
         </div>
     </nav>
     <div class="ambitions">
-        <h1 class="ambitions-text">Nettstedet som gjør læring enkelt</h1>
-    </div>
-    <div class="ocr-program">
-        <h3 class="ocr-program-heading">Program som finner fram til oppgaven din</h3>
-        <br>
-        <a class="ocr-program-heading" href="https://drive.google.com/file/d/1UWUuOZ5EcOhRL-9uVyDuNhqCJ1sn7tPC/view?usp=sharing" target="_blank" rel="noopener noreferrer">Video som veiledning</a>
-        <br>
-        <form class="question-form" action="/upload" method="post" enctype="multipart/form-data">
-            <textarea id="textInput" name="question-text" rows="6" cols="75" placeholder="Skriv inn oppgaven din"
-                class="question-text"></textarea>
-            <br>
-            <label for="file-upload" class="custom-file-upload"> Klikk for å laste opp filer</label>
-            <input id="fileInput" name="file-upload" type="file" />
-            <input type="submit" class="question-submit" value="Send Inn">
-        </form>
-        <div class="question-output-container">
-            <h4>Output:</h4>
-            <h4 id="question-output">{{ output }}</h4>
-        </div>
-    </div>
-    <div class="support">
-        <h1>Støtt oss!</h1>
-        <h2>Støtt oss ved å gi dine oppgaver/prøver/løsningsforslag!</h2>
-        <div class="form">
-            <form method="POST" action="{{ url_for('send_email') }}" enctype="multipart/form-data">
-                <label class="form-title">Skjema for innsending:</label>
-                <br>
-                <label for="year">Årstall (åååå)</label>
-                <input type="number" name="year" id="year" min="1950" max="2025">
-                <br>
-                <label for="school">Skolenavn:</label>
-                <input list="schools" name="school" id="school">
-                <datalist id="schools">
-                    <option value="Nydalen VGS">
-                    <option value="Elvebakken VGS">
-                    <option value="Edvard Munch VGS">
-                    <option value="F21 VGS">
-                    <option value="Lillestrøm VGS">
-                    <option value="Skedsmo VGS">
-                    <option value="Mailand VGS">
-                    <option value="Hersleb VGS">
-                    <option value="Ullern VGS">
-                    <option value="Kongshavn VGS">
-                    <option value="Kuben VGS">
-                    <option value="Foss VGS">
-                    <option value="Vika VGS">
-                    <option value="Akademiet Privat VGS">
-                    <option value="Heltberg Privat VGS">
-                    <option value="Etterstad VGS">
-                    <option value="Bjerke VGS">
-                    <option value="Valle Hovin VGS">
-                    <option value="Stovner VGS">
-                </datalist>
-                <br>
-                <label for="file">Last opp fil*</label>
-                <input type="file" id="file" name="file" required>
-                <br>
-                <label for="resource_type">Ressurstype*</label>
-                <select name="resource_type" id="resource_type" required>
-                    <option value="exam-paper">Eksamensoppgaver</option>
-                    <option value="mock-up-papers">Tentamensoppgaver</option>
-                    <option value="assignments">Innleveringer/Oppgaver</option>
-                    <option value="other">Annet</option>
-                </select>
-                <br>
-                <input type="submit" value="Send inn">
-                <input type="reset" value="Nullstill">
-            </form>            
-        </div>
-        <a href="mailto:contact@realfag.net" class="email">Alternativt send her (contact@realfag.net)!</a>
+        <h1>404 Error</h1>
+        <h2>Denne siden eksisterer ikke ellers har det oppstått en feil</h2>
     </div>
     <footer>
         <div class="version">Versjon 1.2.4

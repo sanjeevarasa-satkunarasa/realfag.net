@@ -8,10 +8,12 @@
         <meta content="Nettstedet som gjør realfag enklere og ved hjelp av et oppgave gjennkjennelsesprogram, for studenter i Norge som studerer både Realfag og SSØ. Av elever for elever."
                 name="description" />
         <meta content="Nover Studio" name="author" />
+        <meta property="og:title" content="Realfag.net | Læring gjort enkelt">
+        <meta property="og:description" content="Nettstedet som gjør realfag enklere og ved hjelp av et oppgave gjennkjennelsesprogram, for studenter i Norge som studerer både Realfag og SSØ. Av elever for elever.">
+        <meta property="og:image" content="https://realfag.net/static/images/favicon_light.ico">
+        <meta property="og:url" content="https://realfag.net">
+        <title>Realfag.net | Læring gjort enkelt</title>
         <link href="{{ url_for('static', filename='css/general.css') }}" rel="stylesheet" />
-        <title>
-                Realfag.net
-        </title>
         <link href="{{ url_for('static', filename='images/favicon_light.ico') }}" id="favicon" rel="icon"
                 type="image/x-icon" />
         <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -30,7 +32,7 @@
                         <img alt="mørk modus knapp" id="dark_mode_icon"
                                 src="{{ url_for('static', filename='images/dark_mode_light.webp') }}" />
                 </a>
-                <a href="https://discord.gg/7AwyneAqgY" id="discord" target="_blank">
+                <a href="https://discord.gg/7AwyneAqgY" id="discord" target="_blank" rel="noopener noreferrer">
                         <img alt="discord-logo" id="dark_mode_discord"
                                 src="{{ url_for('static', filename='images/discord_logo_light.webp') }}" />
                 </a>
@@ -62,7 +64,7 @@
                 <p>
                         Informasjon om tilleggspoeng finner du
                         <a href="https://www.samordnaopptak.no/info/opptak/opptak-uhg/poengberegning/legge-til-poeng/realfagspoeng/"
-                                target="_blank">
+                                target="_blank" rel="noopener noreferrer">
                                 her
                         </a>
                 </p>

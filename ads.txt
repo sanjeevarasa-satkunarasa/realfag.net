@@ -1,0 +1,8 @@
+# Google AdSense
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+
+# AppNexus
+appnexus.com, 1234, DIRECT, f08c47fec0942fa0
+
+# OpenX
+openx.com, 123456789, DIRECT, 6a698e2ec38604c6
