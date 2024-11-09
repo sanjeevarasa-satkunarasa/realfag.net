@@ -1,17 +1,21 @@
+import os
+import re
 from flask import Flask, request, redirect, url_for, flash, render_template
 from flask_mail import Mail, Message
-import os
 import subprocess
 import json
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
-import re
 from PIL import Image
 
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'
-app.config['UPLOAD_FOLDER'] = 'uploads'
+app.config['UPLOAD_FOLDER'] = 'uploads/'
+
+# Ensure the upload folder exists
+if not os.path.exists(app.config['UPLOAD_FOLDER']):
+    os.makedirs(app.config['UPLOAD_FOLDER'])
 
 # Configure Flask-Mail
 app.config['MAIL_SERVER'] = 'smtp.privateemail.com'
@@ -67,7 +71,7 @@ def process_file(file_path):
         return f'Unexpected error: {e}'
 
 # Function to get the most similar document key
-def get_most_similar_document_key(input_string):
+def get_most_similar_document_key(input_string, threshold=0.1):
     data = load_data()
     keys = list(data.keys())
     values = list(data.values())
@@ -76,8 +80,10 @@ def get_most_similar_document_key(input_string):
     vectors = vectorizer.toarray()
     cosine_similarities = cosine_similarity(vectors[-1:], vectors[:-1]).flatten()
     most_similar_index = np.argmax(cosine_similarities)
-    most_similar_key = keys[most_similar_index]
-    return most_similar_key
+    most_similar_score = cosine_similarities[most_similar_index]
+    if most_similar_score < threshold:
+        return None
+    return keys[most_similar_index]
 
 # Function to format output
 def format_output(output):
@@ -94,21 +100,31 @@ def index():
 def upload_file():
     text = request.form.get('question-text')
     file = request.files.get('file-upload')
+    
     if text and file:
         flash("Det kan ikke være to inputter")
         return redirect(url_for('index'))
-    elif file:
+    
+    output = "No input provided"
+    
+    if file:
         file_path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
         file.save(file_path)
         ocr_output = process_file(file_path)
-        data = {file.filename: ocr_output}
-        save_data(data)
-        output = format_output(get_most_similar_document_key(ocr_output))
+        most_similar_key = get_most_similar_document_key(ocr_output)
+        if most_similar_key:
+            output = format_output(most_similar_key)
+        else:
+            output = "Fant ikke oppgaven din"
+
     elif text:
         normalized_text = re.sub(r'\W+', ' ', text.lower())
-        output = format_output(get_most_similar_document_key(normalized_text))
-    else:
-        output = "No input provided"
+        most_similar_key = get_most_similar_document_key(normalized_text)
+        if most_similar_key:
+            output = format_output(most_similar_key)
+        else:
+            output = "Fant ikke oppgaven din"
+
     return render_template('index.html', output=output)
 
 @app.route('/send_email', methods=['POST'])
@@ -117,17 +133,19 @@ def send_email():
     school = request.form['school']
     resource_type = request.form['resource_type']
     file = request.files['file']
-    
-    msg = Message(subject=f"New Submission: {resource_type}", sender='contact@realfag.net', recipients=['contact@realfag.net'])
+
+    msg = Message(subject=f"New Submission: {resource_type}",
+                  sender='contact@realfag.net',
+                  recipients=['contact@realfag.net'])
     msg.body = f"Year: {year}\nSchool: {school}\nResource Type: {resource_type}"
-    
+
     if file:
         filename = file.filename
         file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
         file.save(file_path)
         with app.open_resource(file_path) as fp:
             msg.attach(filename, "application/octet-stream", fp.read())
-    
+
     mail.send(msg)
     flash("Email sent successfully!")
     return redirect(url_for('index'))

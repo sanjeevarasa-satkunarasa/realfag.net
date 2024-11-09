@@ -42,8 +42,11 @@
     </div>
     <div class="ocr-program">
         <h3 class="ocr-program-heading">Program som finner fram til oppgaven din</h3>
+        <br>
+        <a class="ocr-program-heading" href="https://drive.google.com/file/d/1UWUuOZ5EcOhRL-9uVyDuNhqCJ1sn7tPC/view?usp=sharing" target="_blank">Video som veiledning</a>
+        <br>
         <form class="question-form" action="/upload" method="post" enctype="multipart/form-data">
-            <textarea id="textInput" name="question-text" rows="6" cols="75" placeholder="Skriv inn oppgaven"
+            <textarea id="textInput" name="question-text" rows="6" cols="75" placeholder="Skriv inn oppgaven din"
                 class="question-text"></textarea>
             <br>
             <label for="file-upload" class="custom-file-upload"> Klikk for å laste opp filer</label>
@@ -54,20 +57,20 @@
             <h4>Output:</h4>
             <h4 id="question-output">{{ output }}</h4>
         </div>
-        <a href="{{ url_for('static', filename='images\OCR Program AD.mp4') }}" target="_blank">Video som veiledning</a>
     </div>
     <div class="support">
         <h1>Støtt oss!</h1>
         <h2>Støtt oss ved å gi dine oppgaver/prøver/løsningsforslag!</h2>
         <div class="form">
-            <form method="POST" action="{{ url_for('send_email') }}">
+            <form method="POST" action="{{ url_for('send_email') }}" enctype="multipart/form-data">
                 <label class="form-title">Skjema for innsending:</label>
                 <br>
                 <label for="year">Årstall (åååå)</label>
                 <input type="number" name="year" id="year" min="1950" max="2025">
                 <br>
                 <label for="school">Skolenavn:</label>
-                <datalist id="school">
+                <input list="schools" name="school" id="school">
+                <datalist id="schools">
                     <option value="Nydalen VGS">
                     <option value="Elvebakken VGS">
                     <option value="Edvard Munch VGS">
@@ -96,13 +99,13 @@
                 <select name="resource_type" id="resource_type" required>
                     <option value="exam-paper">Eksamensoppgaver</option>
                     <option value="mock-up-papers">Tentamensoppgaver</option>
-                    <option value="assignements">Innleveringer/Oppgaver</option>
+                    <option value="assignments">Innleveringer/Oppgaver</option>
                     <option value="other">Annet</option>
                 </select>
                 <br>
                 <input type="submit" value="Send inn">
                 <input type="reset" value="Nullstill">
-            </form>
+            </form>            
         </div>
         <a href="mailto:contact@realfag.net" class="email">Alternativt send her (contact@realfag.net)!</a>
     </div>
@@ -110,18 +113,19 @@
         <div class="version">Versjon 1.2.4
             <a href="{{ url_for('static', filename='templates/logg.html') }}"> Logg </a>
         </div>
-        <div class="popup" onclick="popUp()" async> Rapporter et problem/forbedringer
+        <div class="popup">
             <span class="popuptext" id="myPopup">
-                <form method="POST" action="{{ url_for('send_problem') }}">
+                <form method="POST" action="{{ url_for('send_problem') }}" id="problemForm">
                     <label for="problem-text">Oppgi Problemet ditt:</label>
                     <br>
                     <textarea id="problem-text" name="problem-text" rows="10" cols="40"></textarea>
                     <br>
                     <input type="submit" value="Send inn">
                 </form>
-                <button onclick="popUpClose()">Lukk</button>
+                <button type="button" onclick="popUpClose()">Lukk</button>
             </span>
-        </div>
+            <button type="button" onclick="popUp()">Rapporter et problem/forbedringer</button>
+        </div>                               
     </footer>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <!-- Google tag (gtag.js) -->
