@@ -1,6 +1,6 @@
 import os
 import re
-from flask import Flask, request, redirect, url_for, flash, render_template
+from flask import Flask, request, redirect, url_for, flash, render_template, send_from_directory
 from flask_mail import Mail, Message
 import subprocess
 import json
@@ -184,6 +184,18 @@ def info():
 @app.route('/static/templates/logg.html')
 def logg():
     return render_template('logg.html')
+
+@app.route('/robots.txt')
+def robots_txt():
+    return send_from_directory(app.root_path, 'robots.txt', mimetype='text/plain')
+
+@app.route('/sitemap.xml')
+def sitemap_xml():
+    return send_from_directory(app.root_path, 'sitemap.xml', mimetype='application/xml')
+
+@app.route('/.htaccess')
+def htaccess():
+    return send_from_directory(app.root_path, '.htaccess', mimetype='text/plain')
 
 @app.errorhandler(404)
 def page_not_found(e):
