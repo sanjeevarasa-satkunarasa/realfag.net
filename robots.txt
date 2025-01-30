@@ -1,14 +1,4 @@
-# Allow all user agents access to all content
 User-agent: *
 Disallow:
 
-# Block access to specific directories
-Disallow: /admin/
-Disallow: /login/
-
-# Allow access to specific files
-Allow: /public/
-Allow: /about/
-
-# Sitemap location
 Sitemap: https://realfag.net/sitemap.xml
