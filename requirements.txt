@@ -1,9 +1,10 @@
 Flask
 Flask-Mail
+flask-compress
+flask_assets
 pymongo
 scikit-learn
 numpy
 Pillow
 ocrmypdf
 tesseract
-flask-compress

@@ -2,6 +2,20 @@
 <html lang="nb">
 
 <head>
+    <!-- JSON-LD Structured Data -->
+    <script async type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Website",
+          "name": "Realfag",
+          "url": "https://realfag.net",
+          "description": "Nettstedet som gjør realfag enklere og ved hjelp av et oppgave gjennkjennelsesprogram, for studenter i Norge som studerer både Realfag og SSØ. Av elever for elever.",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Realfag"
+          }
+        }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="science, study tools, study tool, realfag, realfag.net">
@@ -10,7 +24,7 @@
     <meta name="author" content="Nover Studio">
     
     <!-- Link to external CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" id="theme-style">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/school-light.css') }}" id="theme-style">
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Realfag.net | Læring gjort enkelt">
@@ -829,10 +843,10 @@
             </span>
         </div>
     </footer>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script async src="{{ url_for('static', filename='js/script.js') }}"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J4FCTJJ2YD"></script>
-    <script>
+    <script async>
             window.dataLayer = window.dataLayer || [];
             function gtag() { dataLayer.push(arguments); }
             gtag('js', new Date());

@@ -3,6 +3,7 @@ import re
 from flask import Flask, request, redirect, url_for, flash, render_template, send_from_directory
 from flask_mail import Mail, Message
 from flask_compress import Compress
+from flask_assets import Environment, Bundle
 import subprocess
 import json
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -92,6 +93,13 @@ def format_output(output):
     if output:
         output = output.replace(".pdf", "").replace("_", " ")
     return output
+# Flask assests
+assets = Environment(app)
+css = Bundle("style.css", filters="cssmin", output="style.min.css")
+js = Bundle("script.js", filters="jsmin", output="script.min.js")
+
+assets.register("css_all", css)
+assets.register("js_all", js)
 
 # Flask routes
 @app.route('/')
