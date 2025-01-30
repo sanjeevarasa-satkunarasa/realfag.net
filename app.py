@@ -2,6 +2,7 @@ import os
 import re
 from flask import Flask, request, redirect, url_for, flash, render_template, send_from_directory
 from flask_mail import Mail, Message
+from flask_compress import Compress
 import subprocess
 import json
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -10,6 +11,7 @@ import numpy as np
 from PIL import Image
 
 app = Flask(__name__)
+Compress(app)  # Enables Gzip compression
 app.secret_key = 'supersecretkey'
 app.config['UPLOAD_FOLDER'] = 'uploads/'
 
@@ -95,6 +97,13 @@ def format_output(output):
 @app.route('/')
 def index():
     return render_template('index.html', output="")
+
+@app.before_request
+def redirect_nonpreferred():
+    if not request.is_secure:  # Redirect HTTP to HTTPS
+        return redirect(request.url.replace("http://", "https://"), code=301)
+    if request.host.startswith("www."):  # Redirect www to non-www
+        return redirect(request.url.replace("www.", ""), code=301)
 
 @app.route('/upload', methods=['POST'])
 def upload_file():

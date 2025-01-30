@@ -2,25 +2,46 @@
 <html lang="nb">
 
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="science, study tools, study tool, realfag, realfag.net" name="keywords" />
-    <meta content="Nettstedet som gjør realfag enklere og ved hjelp av et oppgave gjennkjennelsesprogram, for studenter i Norge som studerer både Realfag og SSØ. Av elever for elever." name="description" />
-    <meta content="Nover Studio" name="author" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="science, study tools, study tool, realfag, realfag.net">
+    <meta name="description"
+        content="Nettstedet som gjør realfag enklere og ved hjelp av et oppgave gjennkjennelsesprogram, for studenter i Norge som studerer både Realfag og SSØ. Av elever for elever.">
+    <meta name="author" content="Nover Studio">
+    
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" id="theme-style">
+
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Realfag.net | Læring gjort enkelt">
-    <meta property="og:description" content="Nettstedet som gjør realfag enklere og ved hjelp av et oppgave gjennkjennelsesprogram, for studenter i Norge som studerer både Realfag og SSØ. Av elever for elever.">
+    <meta property="og:description"
+        content="Nettstedet som gjør realfag enklere og ved hjelp av et oppgave gjennkjennelsesprogram, for studenter i Norge som studerer både Realfag og SSØ. Av elever for elever.">
     <meta property="og:image" content="https://realfag.net/static/images/favicon_light.ico">
     <meta property="og:url" content="https://realfag.net">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Realfag.net | Læring gjort enkelt">
+    <meta name="twitter:description"
+        content="Nettstedet som gjør realfag enklere og ved hjelp av et oppgave gjennkjennelsesprogram, for studenter i Norge som studerer både Realfag og SSØ. Av elever for elever.">
+    <meta name="twitter:image" content="https://realfag.net/static/images/favicon_light.ico">
+
+    <!-- Page Title -->
     <title>Realfag.net | Læring gjort enkelt</title>
-    <link href="{{ url_for('static', filename='css/school-light.css') }}" id="theme-style" rel="stylesheet" />
-    <link href="{{ url_for('static', filename='images/favicon_light.ico') }}" id="favicon" rel="icon"
-        type="image/x-icon" />
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon_light.ico') }}" id="favicon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;display=swap"
-        rel="stylesheet" />
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+
 </head>
+
 
 <body onload="applySavedTheme(true)">
     <nav>

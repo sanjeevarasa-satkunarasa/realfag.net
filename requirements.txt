@@ -6,3 +6,4 @@ numpy
 Pillow
 ocrmypdf
 tesseract
+flask-compress

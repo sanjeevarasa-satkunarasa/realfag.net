@@ -8,15 +8,32 @@
     <meta name="description"
         content="Nettstedet som gjør realfag enklere og ved hjelp av et oppgave gjennkjennelsesprogram, for studenter i Norge som studerer både Realfag og SSØ. Av elever for elever.">
     <meta name="author" content="Nover Studio">
+    
+    <!-- Link to external CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" id="theme-style">
+
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Realfag.net | Læring gjort enkelt">
     <meta property="og:description"
         content="Nettstedet som gjør realfag enklere og ved hjelp av et oppgave gjennkjennelsesprogram, for studenter i Norge som studerer både Realfag og SSØ. Av elever for elever.">
     <meta property="og:image" content="https://realfag.net/static/images/favicon_light.ico">
     <meta property="og:url" content="https://realfag.net">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Realfag.net | Læring gjort enkelt">
+    <meta name="twitter:description"
+        content="Nettstedet som gjør realfag enklere og ved hjelp av et oppgave gjennkjennelsesprogram, for studenter i Norge som studerer både Realfag og SSØ. Av elever for elever.">
+    <meta name="twitter:image" content="https://realfag.net/static/images/favicon_light.ico">
+
+    <!-- Page Title -->
     <title>Realfag.net | Læring gjort enkelt</title>
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon_light.ico') }}"
-        id="favicon">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon_light.ico') }}" id="favicon">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -24,6 +41,7 @@
         rel="stylesheet">
 
 </head>
+
 
 <body onload="applySavedTheme(false)">
     <nav>
