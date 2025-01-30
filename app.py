@@ -106,13 +106,6 @@ assets.register("js_all", js)
 def index():
     return render_template('index.html', output="")
 
-@app.before_request
-def redirect_nonpreferred():
-    if not request.is_secure:  # Redirect HTTP to HTTPS
-        return redirect(request.url.replace("http://", "https://"), code=301)
-    if request.host.startswith("www."):  # Redirect www to non-www
-        return redirect(request.url.replace("www.", ""), code=301)
-
 @app.route('/upload', methods=['POST'])
 def upload_file():
     text = request.form.get('question-text')
