@@ -1,4 +1,4 @@
-# Enable URL rewriting
+# Enable Rewrite Engine
 RewriteEngine On
 
 # Redirect HTTP to HTTPS and www to non-www
@@ -53,3 +53,13 @@ ErrorDocument 404 /404.html
     Header always set Referrer-Policy "no-referrer-when-downgrade"
     Header set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; frame-ancestors 'none';"
 </IfModule>
+
+# Block access to ALL content under /eksamensoppgaver/ for realfag.net
+RewriteCond %{HTTP_HOST} ^realfag\.net$ [NC]
+RewriteCond %{REQUEST_URI} ^/eksamensoppgaver/ [NC]
+RewriteRule .* - [F]
+
+# Block access to ALL content under /eksamensoppgaver/ for www.realfag.net
+RewriteCond %{HTTP_HOST} ^www\.realfag\.net$ [NC]
+RewriteCond %{REQUEST_URI} ^/eksamensoppgaver/ [NC]
+RewriteRule .* - [F]
